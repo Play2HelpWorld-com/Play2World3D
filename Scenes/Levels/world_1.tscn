@@ -1,6 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://2nrq4njde1av"]
+[gd_scene load_steps=7 format=3 uid="uid://2nrq4njde1av"]
 
 [ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x6jtg"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_tqpd6"]
+sky_material = SubResource("ProceduralSkyMaterial_x6jtg")
+
+[sub_resource type="Environment" id="Environment_qgd7p"]
+background_mode = 2
+sky = SubResource("Sky_tqpd6")
+tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w3xoc"]
 size = Vector2(200, 200)
@@ -10,15 +22,22 @@ albedo_color = Color(0.988235, 0.203922, 0, 0.968627)
 
 [node name="World1" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qgd7p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="captain" parent="." instance=ExtResource("1_bgyfo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277899, -0.387671, -0.138993)
 
 [node name="Camera3D" type="Camera3D" parent="captain"]
-transform = Transform3D(0.995942, -0.0830754, -0.0346098, 0.088145, 0.978042, 0.188848, 0.0181612, -0.191133, 0.981396, 1.31665, -2.69127, 8.87495)
+transform = Transform3D(0.999777, -0.0122821, -0.0172079, 0.0154157, 0.980521, 0.19581, 0.0144677, -0.196032, 0.980491, -0.698065, 2.28512, 4.47012)
 fov = 101.78
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.975902, -0.218211, 0, 0.218211, 0.975902, -4.14377, -2.95263, 1.74971)
+transform = Transform3D(1, 0, 0, 0, 0.999947, 0.0103152, 0, -0.0103152, 0.999947, 34.9975, -14.1154, -12.5779)
 use_collision = true
 mesh = SubResource("PlaneMesh_w3xoc")
 material = SubResource("StandardMaterial3D_qfhbf")
