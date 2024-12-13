@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://2nrq4njde1av"]
+
+[ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w3xoc"]
+size = Vector2(200, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfhbf"]
+albedo_color = Color(0.988235, 0.203922, 0, 0.968627)
+
+[node name="World1" type="Node3D"]
+
+[node name="captain" parent="." instance=ExtResource("1_bgyfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277899, -0.387671, -0.138993)
+
+[node name="Camera3D" type="Camera3D" parent="captain"]
+transform = Transform3D(0.995942, -0.0830754, -0.0346098, 0.088145, 0.978042, 0.188848, 0.0181612, -0.191133, 0.981396, 1.31665, -2.69127, 8.87495)
+fov = 101.78
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.975902, -0.218211, 0, 0.218211, 0.975902, -4.14377, -2.95263, 1.74971)
+use_collision = true
+mesh = SubResource("PlaneMesh_w3xoc")
+material = SubResource("StandardMaterial3D_qfhbf")
