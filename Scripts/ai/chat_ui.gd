@@ -89,16 +89,16 @@ func _on_request_completed(_result: int, _response_code: int, _headers: Array, b
 		var error = json.parse(body_text)
 		if error == OK:
 			var response = json.get_data()
-			
+
 			# Print the full response for debugging
 			print("Full Response: ", response)
-			
+
 			# Ensure the response has the expected structure
-			if response.has("predictions") and response["predictions"].size() > 0:
-				var ai_response = response["predictions"][0].get("content", "No response received.")
-				response_label.text = ai_response
+			if response.has("candidates") and response["candidates"].size() > 0:
+				var ai_response = response["candidates"][0]["content"]["parts"][0]["text"]  # Accessing the text part
+				response_label.text = ai_response  # Display only the text in RichTextLabel
 			else:
-				response_label.text = "Invalid response structure: 'predictions' not found or empty."
+				response_label.text = "Invalid response structure: 'candidates' not found or empty."
 		else:
 			response_label.text = "Error parsing response: " + str(error)
 	else:
