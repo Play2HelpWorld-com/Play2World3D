@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ljv2pphpa4w1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 308.0
+offset_right = 1126.0
+offset_bottom = 527.0
+text = "Hello?"
+fit_content = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 555.0
+offset_right = 1122.0
+offset_bottom = 624.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 559.0
+offset_right = 753.0
+offset_bottom = 618.0

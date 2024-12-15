@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://2nrq4njde1av"]
+[gd_scene load_steps=12 format=3 uid="uid://2nrq4njde1av"]
 
 [ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
 [ext_resource type="Script" path="res://Scripts/ui_scripts/camera_controller.gd" id="2_pf6np"]
 [ext_resource type="Texture2D" uid="uid://cufo3ne0m5j6e" path="res://icon.svg" id="2_rqtui"]
+[ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/control.tscn" id="4_kmb2q"]
+[ext_resource type="Script" path="res://Scripts/ai/chat_ui.gd" id="5_gbv0h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x6jtg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -50,3 +52,10 @@ script = ExtResource("2_pf6np")
 [node name="Camera3D" type="Camera3D" parent="cam_gimbal"]
 transform = Transform3D(0.999776, -0.012282, -0.0172079, 0.0154157, 0.980521, 0.19581, 0.0144677, -0.196032, 0.980491, -0.420166, 1.89745, 4.33113)
 fov = 101.78
+
+[node name="Control" parent="." instance=ExtResource("4_kmb2q")]
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 1142.0
+offset_bottom = 635.0
+script = ExtResource("5_gbv0h")
