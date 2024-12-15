@@ -4,9 +4,9 @@ extends Control
 var api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=AIzaSyDGICS7oJGqYttTeHHp7RaYlBKeJHlREGI"
 
 # References to UI nodes
-@onready var user_input = $LineEdit
-@onready var response_label = $RichTextLabel
-@onready var send_button = $Button
+@onready var response_label = $VBoxContainer/ScrollContainer/RichTextLabel
+@onready var user_input = $VBoxContainer/HBoxContainer/LineEdit
+@onready var send_button = $VBoxContainer/HBoxContainer/Button
 @onready var http_request = HTTPRequest.new()  # Declare it globally
 
 func _ready():
