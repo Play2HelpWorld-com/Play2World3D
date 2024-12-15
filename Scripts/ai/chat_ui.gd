@@ -27,6 +27,8 @@ func _on_send_button_pressed():
 
 # Make the HTTP request to Gemini AI
 func send_request(payload: Dictionary):
+	# Disconnect previous signal connection if any
+	http_request.disconnect("request_completed", Callable(self, "_on_request_completed"))
 	# Connect the signal for request completion
 	http_request.connect("request_completed", Callable(self, "_on_request_completed"))
 
@@ -103,6 +105,3 @@ func _on_request_completed(_result: int, _response_code: int, _headers: Array, b
 			response_label.text = "Error parsing response: " + str(error)
 	else:
 		response_label.text = "Failed with response code: " + str(_response_code)
-
-	# Cleanup: Free the HTTPRequest instance
-	http_request.queue_free()  # Free the instance after use
