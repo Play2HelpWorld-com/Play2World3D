@@ -28,3 +28,5 @@ offset_left = 633.0
 offset_top = 559.0
 offset_right = 753.0
 offset_bottom = 618.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

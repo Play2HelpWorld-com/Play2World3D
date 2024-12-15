@@ -1,62 +1,108 @@
 extends Control
 
 # Replace with your Gemini AI API details
-var api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDGICS7oJGqYttTeHHp7RaYlBKeJHlREGI"
+var api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=AIzaSyDGICS7oJGqYttTeHHp7RaYlBKeJHlREGI"
 
 # References to UI nodes
 @onready var user_input = $LineEdit
 @onready var response_label = $RichTextLabel
 @onready var send_button = $Button
+@onready var http_request = HTTPRequest.new()  # Declare it globally
 
 func _ready():
-	# Connect the button to the send_prompt function using Callable
+	# Add HTTPRequest to the scene tree if not already added
+	add_child(http_request)
+	# Connect the button to send_prompt function
 	send_button.connect("pressed", Callable(self, "_on_send_button_pressed"))
 
-# Send the user's input to the Gemini AI API
+# Triggered when the send button is pressed
 func _on_send_button_pressed():
 	var user_prompt = user_input.text.strip_edges()
 	if user_prompt != "":
 		response_label.text = "Loading..."
 		send_request({"prompt": user_prompt})
 		user_input.text = ""  # Clear input field
+	else:
+		response_label.text = "Please enter a valid prompt."
 
 # Make the HTTP request to Gemini AI
 func send_request(payload: Dictionary):
-	var http_request = HTTPRequest.new()
-	add_child(http_request)  # Add to the scene tree temporarily
+	# Connect the signal for request completion
 	http_request.connect("request_completed", Callable(self, "_on_request_completed"))
 
-	# Create the correct payload structure for the Gemini AI API
+	# Prepare the payload structure for the Gemini AI API
 	var request_body = {
-		"prompt": {
-			"text": payload["prompt"]
-		},
-		"model_parameters": {
-			"temperature": 0.7,  # Adjust for creativity (lower = more deterministic, higher = more creative)
-			"maxOutputTokens": 256  # Adjust the token limit for the response
+		"contents": [
+			{
+				"role": "user",
+				"parts": [
+					{
+						"text": "which gemini ai model is free for use for developer?\n"
+					}
+				]
+			},
+			{
+				"role": "model",
+				"parts": [
+					{
+						"text": "Unfortunately, there isn't a single, universally recognized 'Gemini AI model' that's completely free for developers..."
+					}
+				]
+			},
+			{
+				"role": "user",
+				"parts": [
+					{
+						"text": payload["prompt"]
+					}
+				]
 			}
+		],
+		"generationConfig": {
+			"temperature": 1,
+			"topK": 40,
+			"topP": 0.95,
+			"maxOutputTokens": 8192,
+			"responseMimeType": "text/plain"
 		}
+	}
 
 	# Make the HTTP request
-	http_request.request(
+	var error = http_request.request(
 		api_url,
-		["Content-Type: application/json"],  # Headers
+		["Content-Type: application/json"],  # HTTP headers
 		HTTPClient.METHOD_POST,
 		JSON.stringify(request_body)  # Convert payload to JSON string
 	)
 
+	# Check if the request was successfully initiated
+	if error != OK:
+		response_label.text = "Failed to initiate request: " + str(error)
 
 # Handle the response from Gemini AI
-func _on_request_completed(result: int, response_code: int, headers: Array, body: PackedByteArray):
+func _on_request_completed(_result: int, _response_code: int, _headers: Array, body: PackedByteArray):
 	var body_text = body.get_string_from_utf8()  # Convert the response body to a string
-	if response_code == 200:
-		var json = JSON.new()  # Create a JSON parser instance
-		var response = json.parse(body_text)
-		if response.error == OK:
-			var predictions = response.result["predictions"]
-			var ai_response = predictions[0].get("content", "No response received.")
-			response_label.text = ai_response
+
+	# Check the response code
+	if _response_code == 200:
+		var json = JSON.new()
+		var error = json.parse(body_text)
+		if error == OK:
+			var response = json.get_data()
+			
+			# Print the full response for debugging
+			print("Full Response: ", response)
+			
+			# Ensure the response has the expected structure
+			if response.has("predictions") and response["predictions"].size() > 0:
+				var ai_response = response["predictions"][0].get("content", "No response received.")
+				response_label.text = ai_response
+			else:
+				response_label.text = "Invalid response structure: 'predictions' not found or empty."
 		else:
-			response_label.text = "Error parsing response: " + str(response.error)
+			response_label.text = "Error parsing response: " + str(error)
 	else:
-		response_label.text = "Failed to connect to Gemini AI. Response code: " + str(response_code)
+		response_label.text = "Failed with response code: " + str(_response_code)
+
+	# Cleanup: Free the HTTPRequest instance
+	http_request.queue_free()  # Free the instance after use
