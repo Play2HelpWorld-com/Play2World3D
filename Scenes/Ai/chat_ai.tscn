@@ -15,9 +15,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -80.0
-offset_right = -20.0
-offset_bottom = 60.0
+offset_left = -63.0
+offset_top = 8.0
+offset_right = -4.0
+offset_bottom = 44.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "AI"
@@ -30,7 +31,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -548.0
-offset_top = -698.0
+offset_top = -449.0
+offset_bottom = -5.0
 grow_horizontal = 0
 grow_vertical = 0
 alignment = 2
@@ -62,14 +64,14 @@ layout_mode = 2
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(485, 50)
+custom_minimum_size = Vector2(485, 40)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 placeholder_text = "Ask me anything?"
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(50, 40)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Send"
