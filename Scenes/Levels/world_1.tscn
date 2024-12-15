@@ -54,8 +54,8 @@ transform = Transform3D(0.999776, -0.012282, -0.0172079, 0.0154157, 0.980521, 0.
 fov = 101.78
 
 [node name="chat_ai" parent="." instance=ExtResource("4_kmb2q")]
-offset_left = 613.0
-offset_top = 7.0
-offset_right = 1142.0
-offset_bottom = 635.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = -9.0
+offset_bottom = -16.0
 script = ExtResource("5_gbv0h")

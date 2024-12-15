@@ -8,12 +8,23 @@ var api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.
 @onready var user_input = $VBoxContainer/HBoxContainer/LineEdit
 @onready var send_button = $VBoxContainer/HBoxContainer/Button
 @onready var http_request = HTTPRequest.new()  # Declare it globally
+@onready var toggle_button = $MenuButton  # Reference to the button that will toggle the VBoxContainer visibility
+@onready var vbox_container = $VBoxContainer  # Reference to the VBoxContainer that will be shown/hidden
 
 func _ready():
 	# Add HTTPRequest to the scene tree if not already added
 	add_child(http_request)
-	# Connect the button to send_prompt function
+	
+	# Connect the button to toggle the VBoxContainer visibility
+	toggle_button.connect("pressed", Callable(self, "_on_toggle_button_pressed"))
+	
+	# Connect the send button to the send_prompt function
 	send_button.connect("pressed", Callable(self, "_on_send_button_pressed"))
+
+# Triggered when the toggle button is pressed
+func _on_toggle_button_pressed():
+	# Toggle the visibility of the VBoxContainer
+	vbox_container.visible = !vbox_container.visible  # Invert visibility of VBoxContainer
 
 # Triggered when the send button is pressed
 func _on_send_button_pressed():
@@ -29,6 +40,7 @@ func _on_send_button_pressed():
 func send_request(payload: Dictionary):
 	# Disconnect previous signal connection if any
 	http_request.disconnect("request_completed", Callable(self, "_on_request_completed"))
+	
 	# Connect the signal for request completion
 	http_request.connect("request_completed", Callable(self, "_on_request_completed"))
 
