@@ -1,0 +1,57 @@
+<script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let metrics = {
+            revenue: 50000,
+            playerCount: 1200000,
+            growthRate: 10,
+            profitMargin: 25,
+            marketShare: 15,
+            retentionRate: 45,
+            investments: 10000000,
+            inGameCurrency: 5000
+        };
+
+        function updateMetrics() {
+            metrics.revenue += Math.floor(Math.random() * (5000 - 1000) + 1000);
+            metrics.playerCount += Math.floor(Math.random() * (10000 - 5000) + 5000);
+            metrics.growthRate = Math.max(0, metrics.growthRate + Math.floor(Math.random() * 6) - 2);
+            metrics.profitMargin = Math.max(0, metrics.profitMargin + Math.floor(Math.random() * 4) - 1);
+            metrics.marketShare = Math.max(0, metrics.marketShare + Math.floor(Math.random() * 4) - 1);
+            metrics.retentionRate = Math.max(0, metrics.retentionRate + Math.floor(Math.random() * 3) - 1);
+            metrics.investments += Math.floor(Math.random() * (200000 - 50000) + 50000);
+            metrics.inGameCurrency += Math.floor(Math.random() * (500 - 100) + 100);
+        }
+
+        function drawScorebar() {
+            ctx.clearRect(0, 0, canvas.width, 10);
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, 40);
+
+            ctx.fillStyle = "white";
+            ctx.font = "18px Arial";
+
+            // Adjusting positions to create more space between each string
+            const startX = 10;  // Starting position for the first metric
+            const spaceBetween = 170;  // Space between each metric (adjust as needed)
+
+            ctx.fillText(Revenue: $${metrics.revenue.toLocaleString()}, startX, 20);
+            ctx.fillText(Players: ${metrics.playerCount.toLocaleString()}, startX + spaceBetween, 20);
+            ctx.fillText(Growth: +${metrics.growthRate}%, startX + spaceBetween * 2, 20);
+            ctx.fillText(Profit Margin: ${metrics.profitMargin}%, startX + spaceBetween * 3, 20);
+            ctx.fillText(Market Share: ${metrics.marketShare}%, startX + spaceBetween * 4, 20);
+            ctx.fillText(Retention: ${metrics.retentionRate}%, startX + spaceBetween * 5, 20);
+
+            ctx.clearRect(0, 30, canvas.width, 40);
+            ctx.fillText(Investments: $${metrics.investments.toLocaleString()}, startX, 50);
+            ctx.fillText(In-Game Currency: $${metrics.inGameCurrency}, startX + spaceBetween * 2, 50);
+        }
+
+        function gameLoop() {
+            updateMetrics();
+            drawScorebar();
+        }
+
+        setInterval(gameLoop, 1000); // Update every second
+    </script>
