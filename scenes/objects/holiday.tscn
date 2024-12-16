@@ -1,0 +1,301 @@
+[gd_scene load_steps=100 format=3 uid="uid://dn4neq6h7dhtu"]
+
+[ext_resource type="PackedScene" uid="uid://cd1jwxbsyqumd" path="res://assets/holiday/bench-short.glb" id="1_kdeje"]
+[ext_resource type="PackedScene" uid="uid://tftbatyoomb7" path="res://assets/holiday/bench.glb" id="2_e0nkm"]
+[ext_resource type="PackedScene" uid="uid://65kbfqa27nb6" path="res://assets/holiday/cabin-corner-bottom.glb" id="3_0akbg"]
+[ext_resource type="PackedScene" uid="uid://bq1c6u3iw057u" path="res://assets/holiday/cabin-corner-logs.glb" id="4_2x8gb"]
+[ext_resource type="PackedScene" uid="uid://bfj1ercrvlqfp" path="res://assets/holiday/cabin-corner.glb" id="5_no6xt"]
+[ext_resource type="PackedScene" uid="uid://dtod0gi2e7umr" path="res://assets/holiday/cabin-door-rotate.glb" id="6_0bui4"]
+[ext_resource type="PackedScene" uid="uid://bj7a8ip4am8of" path="res://assets/holiday/cabin-doorway-center.glb" id="7_wbq3y"]
+[ext_resource type="PackedScene" uid="uid://dn03n76018ere" path="res://assets/holiday/cabin-doorway-left.glb" id="8_je04y"]
+[ext_resource type="PackedScene" uid="uid://6f6yqx7gjym0" path="res://assets/holiday/cabin-doorway-right.glb" id="9_h7icp"]
+[ext_resource type="PackedScene" uid="uid://c8onox540b188" path="res://assets/holiday/cabin-doorway.glb" id="10_qp6hr"]
+[ext_resource type="PackedScene" uid="uid://rcwpqr0id466" path="res://assets/holiday/cabin-fence.glb" id="11_tmu75"]
+[ext_resource type="PackedScene" uid="uid://bgj0j7887j6jk" path="res://assets/holiday/cabin-overhang-door-rotate.glb" id="12_14cf3"]
+[ext_resource type="PackedScene" uid="uid://recc7lnu7qyy" path="res://assets/holiday/cabin-overhang-doorway.glb" id="13_n36kf"]
+[ext_resource type="PackedScene" uid="uid://d3j07txfhfrk0" path="res://assets/holiday/cabin-roof-chimney.glb" id="14_8chot"]
+[ext_resource type="PackedScene" uid="uid://c0h1whknqwilb" path="res://assets/holiday/cabin-roof-corner.glb" id="15_2k5n2"]
+[ext_resource type="PackedScene" uid="uid://kbavb0i7uc3l" path="res://assets/holiday/cabin-roof-dormer.glb" id="16_u46fe"]
+[ext_resource type="PackedScene" uid="uid://badk6vhjp3i0l" path="res://assets/holiday/cabin-roof-point.glb" id="17_khg33"]
+[ext_resource type="PackedScene" uid="uid://bn441ib2v4ww6" path="res://assets/holiday/cabin-roof-snow-chimney.glb" id="18_8dwtb"]
+[ext_resource type="PackedScene" uid="uid://c413p7boqu8wq" path="res://assets/holiday/cabin-roof-snow-corner.glb" id="19_66o0y"]
+[ext_resource type="PackedScene" uid="uid://8jr528rh7oiq" path="res://assets/holiday/cabin-roof-snow-dormer.glb" id="20_0byeg"]
+[ext_resource type="PackedScene" uid="uid://e517u6jokqhr" path="res://assets/holiday/cabin-roof-snow-point.glb" id="21_kcejp"]
+[ext_resource type="PackedScene" uid="uid://b3mjip6ujdab2" path="res://assets/holiday/cabin-roof-snow.glb" id="22_5wcvn"]
+[ext_resource type="PackedScene" uid="uid://dww28g80smon5" path="res://assets/holiday/cabin-roof-top.glb" id="23_svlpe"]
+[ext_resource type="PackedScene" uid="uid://bm7raa1dyen8d" path="res://assets/holiday/cabin-roof.glb" id="24_175mm"]
+[ext_resource type="PackedScene" uid="uid://cxlx6krs3u2y3" path="res://assets/holiday/cabin-wall-low.glb" id="25_0cbua"]
+[ext_resource type="PackedScene" uid="uid://cphkklkdgxygj" path="res://assets/holiday/cabin-wall-roof-center.glb" id="26_6immg"]
+[ext_resource type="PackedScene" uid="uid://dhj460htjcjei" path="res://assets/holiday/cabin-wall-roof.glb" id="27_d4c4h"]
+[ext_resource type="PackedScene" uid="uid://bvtle1nh271m4" path="res://assets/holiday/cabin-wall-wreath.glb" id="28_c5tvx"]
+[ext_resource type="PackedScene" uid="uid://wsok8x18s2ev" path="res://assets/holiday/cabin-wall.glb" id="29_3ycok"]
+[ext_resource type="PackedScene" uid="uid://d0gp38v3ceupt" path="res://assets/holiday/cabin-window-a.glb" id="30_v1h8p"]
+[ext_resource type="PackedScene" uid="uid://c2pkghgikux3s" path="res://assets/holiday/cabin-window-b.glb" id="31_g6l6k"]
+[ext_resource type="PackedScene" uid="uid://gfpooqem4qse" path="res://assets/holiday/cabin-window-c.glb" id="32_f37o8"]
+[ext_resource type="PackedScene" uid="uid://cl833ryfyhdql" path="res://assets/holiday/cabin-window-large.glb" id="33_mfbkh"]
+[ext_resource type="PackedScene" uid="uid://bku5wsfu4onl4" path="res://assets/holiday/candy-cane-green.glb" id="34_aet4k"]
+[ext_resource type="PackedScene" uid="uid://ddxtpf1lrgsmq" path="res://assets/holiday/candy-cane-red.glb" id="35_1fth0"]
+[ext_resource type="PackedScene" uid="uid://bkt3pnw7ktb8m" path="res://assets/holiday/festivus-pole.glb" id="36_21h2x"]
+[ext_resource type="PackedScene" uid="uid://c5yamci41l8tb" path="res://assets/holiday/floor-stone.glb" id="37_4cjbd"]
+[ext_resource type="PackedScene" uid="uid://dsq0j0a8umls2" path="res://assets/holiday/floor-wood-snow.glb" id="38_kk0vx"]
+[ext_resource type="PackedScene" uid="uid://brlv6amgleqio" path="res://assets/holiday/floor-wood.glb" id="39_7wwhm"]
+[ext_resource type="PackedScene" uid="uid://udaswdoh8toy" path="res://assets/holiday/gingerbread-man.glb" id="40_apqoq"]
+[ext_resource type="PackedScene" uid="uid://f76nyvlqqpre" path="res://assets/holiday/gingerbread-woman.glb" id="41_grywt"]
+[ext_resource type="PackedScene" uid="uid://burbha7pclo4x" path="res://assets/holiday/hanukkah-dreidel.glb" id="42_ygwmw"]
+[ext_resource type="PackedScene" uid="uid://btxu1ltypbhic" path="res://assets/holiday/hanukkah-menorah-candles.glb" id="43_wbe6j"]
+[ext_resource type="PackedScene" uid="uid://cs8f11ga6rh11" path="res://assets/holiday/hanukkah-menorah.glb" id="44_yoytp"]
+[ext_resource type="PackedScene" uid="uid://c22lq6cwgpm18" path="res://assets/holiday/kwanzaa-kikombe.glb" id="45_j5bh4"]
+[ext_resource type="PackedScene" uid="uid://8o38flopscc2" path="res://assets/holiday/kwanzaa-kinara-alternative.glb" id="46_u0whh"]
+[ext_resource type="PackedScene" uid="uid://cj73587s71tdb" path="res://assets/holiday/kwanzaa-kinara.glb" id="47_q6ktq"]
+[ext_resource type="PackedScene" uid="uid://dqljju7byllxa" path="res://assets/holiday/lantern-hanging.glb" id="48_3x3be"]
+[ext_resource type="PackedScene" uid="uid://chj41wdlo5ckk" path="res://assets/holiday/lantern.glb" id="49_lg3dx"]
+[ext_resource type="PackedScene" uid="uid://clyiiivwhcmjh" path="res://assets/holiday/lights-colored.glb" id="50_gyc3j"]
+[ext_resource type="PackedScene" uid="uid://bxgao43ybs8b5" path="res://assets/holiday/lights-green.glb" id="51_ojnaw"]
+[ext_resource type="PackedScene" uid="uid://d0p4mdnnvyrj5" path="res://assets/holiday/lights-red.glb" id="52_wveex"]
+[ext_resource type="PackedScene" uid="uid://d2yh10snvryix" path="res://assets/holiday/nutcracker.glb" id="53_gfe73"]
+[ext_resource type="PackedScene" uid="uid://84c54bsuo2md" path="res://assets/holiday/present-a-cube.glb" id="54_wjpir"]
+[ext_resource type="PackedScene" uid="uid://c3jwhw478ykal" path="res://assets/holiday/present-a-rectangle.glb" id="55_12f0q"]
+[ext_resource type="PackedScene" uid="uid://chxkent0apx3e" path="res://assets/holiday/present-a-round.glb" id="56_luusg"]
+[ext_resource type="PackedScene" uid="uid://itcf887v3fm5" path="res://assets/holiday/present-b-cube.glb" id="57_f8ee8"]
+[ext_resource type="PackedScene" uid="uid://b3hkul5gxh5rc" path="res://assets/holiday/present-b-rectangle.glb" id="58_2c3ep"]
+[ext_resource type="PackedScene" uid="uid://btvk054gqyjn6" path="res://assets/holiday/present-b-round.glb" id="59_7ow8i"]
+[ext_resource type="PackedScene" uid="uid://2f5kk57q51v4" path="res://assets/holiday/reindeer.glb" id="60_ustm8"]
+[ext_resource type="PackedScene" uid="uid://cdg7lj15oo5o1" path="res://assets/holiday/rocks-large.glb" id="61_vlnyl"]
+[ext_resource type="PackedScene" uid="uid://d0mngvy38wvgd" path="res://assets/holiday/rocks-medium.glb" id="62_ansa8"]
+[ext_resource type="PackedScene" uid="uid://dch83lgatetww" path="res://assets/holiday/rocks-small.glb" id="63_ks14d"]
+[ext_resource type="PackedScene" uid="uid://cj2nq4mmeyijp" path="res://assets/holiday/sled-long.glb" id="64_6wad4"]
+[ext_resource type="PackedScene" uid="uid://sglwijrndtq1" path="res://assets/holiday/sled.glb" id="65_nmkf2"]
+[ext_resource type="PackedScene" uid="uid://tfear2dd834x" path="res://assets/holiday/snow-bunker.glb" id="66_ucnuk"]
+[ext_resource type="PackedScene" uid="uid://b87ajseeo3or0" path="res://assets/holiday/snow-flat-large.glb" id="67_renrv"]
+[ext_resource type="PackedScene" uid="uid://byod2y23uyigs" path="res://assets/holiday/snow-flat.glb" id="68_vvinx"]
+[ext_resource type="PackedScene" uid="uid://dn5ld7gwmwn81" path="res://assets/holiday/snow-pile.glb" id="69_lklmn"]
+[ext_resource type="PackedScene" uid="uid://ctdu6dew1bct1" path="res://assets/holiday/snowflake-a.glb" id="70_5raaf"]
+[ext_resource type="PackedScene" uid="uid://cgqujsox5yrs5" path="res://assets/holiday/snowflake-b.glb" id="71_emgqu"]
+[ext_resource type="PackedScene" uid="uid://d16pfpksqoa3l" path="res://assets/holiday/snowflake-c.glb" id="72_bdrg8"]
+[ext_resource type="PackedScene" uid="uid://byluti0f5g8ww" path="res://assets/holiday/snowman-hat.glb" id="73_l4y0v"]
+[ext_resource type="PackedScene" uid="uid://bborttc1tdyce" path="res://assets/holiday/snowman.glb" id="74_q34lf"]
+[ext_resource type="PackedScene" uid="uid://dtjiiqlyhloaa" path="res://assets/holiday/sock-green-cane.glb" id="75_rlf2u"]
+[ext_resource type="PackedScene" uid="uid://vv10qlsuefjm" path="res://assets/holiday/sock-green.glb" id="76_jyq1b"]
+[ext_resource type="PackedScene" uid="uid://b3fygcgguxwk0" path="res://assets/holiday/sock-red-cane.glb" id="77_s4l4j"]
+[ext_resource type="PackedScene" uid="uid://d2ys566n40ywn" path="res://assets/holiday/sock-red.glb" id="78_c62v3"]
+[ext_resource type="PackedScene" uid="uid://dhis0vgpkvouo" path="res://assets/holiday/train-locomotive.glb" id="79_rixsf"]
+[ext_resource type="PackedScene" uid="uid://c7m6l3w6am3xb" path="res://assets/holiday/train-tender.glb" id="80_58cub"]
+[ext_resource type="PackedScene" uid="uid://byb81ted7q4kd" path="res://assets/holiday/train-wagon-flat-short.glb" id="81_fg27b"]
+[ext_resource type="PackedScene" uid="uid://clq57evfvw2ls" path="res://assets/holiday/train-wagon-flat.glb" id="82_xn4gr"]
+[ext_resource type="PackedScene" uid="uid://bc8d73axw6otu" path="res://assets/holiday/train-wagon-logs.glb" id="83_swyi2"]
+[ext_resource type="PackedScene" uid="uid://fiija4q1y35u" path="res://assets/holiday/train-wagon-short.glb" id="84_so7hm"]
+[ext_resource type="PackedScene" uid="uid://d3yy3ex2c87xe" path="res://assets/holiday/train-wagon.glb" id="85_jk5q2"]
+[ext_resource type="PackedScene" uid="uid://dt702kw2i2r56" path="res://assets/holiday/trainset-rail-bend.glb" id="86_tehk7"]
+[ext_resource type="PackedScene" uid="uid://d3y5d55d48nos" path="res://assets/holiday/trainset-rail-corner.glb" id="87_qa724"]
+[ext_resource type="PackedScene" uid="uid://i55moh44w67s" path="res://assets/holiday/trainset-rail-detailed-bend.glb" id="88_fv26r"]
+[ext_resource type="PackedScene" uid="uid://dpjvlpy0cyyyi" path="res://assets/holiday/trainset-rail-detailed-corner.glb" id="89_gn5x6"]
+[ext_resource type="PackedScene" uid="uid://c1cqmu03mmet6" path="res://assets/holiday/trainset-rail-detailed-straight.glb" id="90_8u023"]
+[ext_resource type="PackedScene" uid="uid://bhqh81gs4l14i" path="res://assets/holiday/trainset-rail-straight.glb" id="91_p5uvb"]
+[ext_resource type="PackedScene" uid="uid://dor8qiwpm3yrx" path="res://assets/holiday/tree-decorated-snow.glb" id="92_4g1uc"]
+[ext_resource type="PackedScene" uid="uid://dc3gu32tf4ow1" path="res://assets/holiday/tree-decorated.glb" id="93_cnxdn"]
+[ext_resource type="PackedScene" uid="uid://dau4vmi6vwvkh" path="res://assets/holiday/tree-snow-a.glb" id="94_jb1t4"]
+[ext_resource type="PackedScene" uid="uid://bad73gox3rfi" path="res://assets/holiday/tree-snow-b.glb" id="95_phiiv"]
+[ext_resource type="PackedScene" uid="uid://dixbhvj5ln6fg" path="res://assets/holiday/tree-snow-c.glb" id="96_k5sda"]
+[ext_resource type="PackedScene" uid="uid://b5tthv2omrixx" path="res://assets/holiday/tree.glb" id="97_7kbmt"]
+[ext_resource type="PackedScene" uid="uid://cesq7v2qjclmr" path="res://assets/holiday/wreath-decorated.glb" id="98_0s4fe"]
+[ext_resource type="PackedScene" uid="uid://dhjct6il8fk8j" path="res://assets/holiday/wreath.glb" id="99_10uo6"]
+
+[node name="holiday" type="Node3D"]
+
+[node name="bench-short2" parent="." instance=ExtResource("1_kdeje")]
+
+[node name="bench2" parent="." instance=ExtResource("2_e0nkm")]
+
+[node name="cabin-corner-bottom2" parent="." instance=ExtResource("3_0akbg")]
+
+[node name="cabin-corner-logs2" parent="." instance=ExtResource("4_2x8gb")]
+
+[node name="cabin-corner2" parent="." instance=ExtResource("5_no6xt")]
+
+[node name="cabin-door-rotate2" parent="." instance=ExtResource("6_0bui4")]
+
+[node name="cabin-doorway-center2" parent="." instance=ExtResource("7_wbq3y")]
+
+[node name="cabin-doorway-left2" parent="." instance=ExtResource("8_je04y")]
+
+[node name="cabin-doorway-right2" parent="." instance=ExtResource("9_h7icp")]
+
+[node name="cabin-doorway2" parent="." instance=ExtResource("10_qp6hr")]
+
+[node name="cabin-fence2" parent="." instance=ExtResource("11_tmu75")]
+
+[node name="cabin-overhang-door-rotate2" parent="." instance=ExtResource("12_14cf3")]
+
+[node name="cabin-overhang-doorway2" parent="." instance=ExtResource("13_n36kf")]
+
+[node name="cabin-roof-chimney2" parent="." instance=ExtResource("14_8chot")]
+
+[node name="cabin-roof-corner2" parent="." instance=ExtResource("15_2k5n2")]
+
+[node name="cabin-roof-dormer2" parent="." instance=ExtResource("16_u46fe")]
+
+[node name="cabin-roof-point2" parent="." instance=ExtResource("17_khg33")]
+
+[node name="cabin-roof-snow-chimney2" parent="." instance=ExtResource("18_8dwtb")]
+
+[node name="cabin-roof-snow-corner2" parent="." instance=ExtResource("19_66o0y")]
+
+[node name="cabin-roof-snow-dormer2" parent="." instance=ExtResource("20_0byeg")]
+
+[node name="cabin-roof-snow-point2" parent="." instance=ExtResource("21_kcejp")]
+
+[node name="cabin-roof-snow2" parent="." instance=ExtResource("22_5wcvn")]
+
+[node name="cabin-roof-top2" parent="." instance=ExtResource("23_svlpe")]
+
+[node name="cabin-roof2" parent="." instance=ExtResource("24_175mm")]
+
+[node name="cabin-wall-low2" parent="." instance=ExtResource("25_0cbua")]
+
+[node name="cabin-wall-roof-center2" parent="." instance=ExtResource("26_6immg")]
+
+[node name="cabin-wall-roof2" parent="." instance=ExtResource("27_d4c4h")]
+
+[node name="cabin-wall-wreath2" parent="." instance=ExtResource("28_c5tvx")]
+
+[node name="cabin-wall2" parent="." instance=ExtResource("29_3ycok")]
+
+[node name="cabin-window-a2" parent="." instance=ExtResource("30_v1h8p")]
+
+[node name="cabin-window-b2" parent="." instance=ExtResource("31_g6l6k")]
+
+[node name="cabin-window-c2" parent="." instance=ExtResource("32_f37o8")]
+
+[node name="cabin-window-large2" parent="." instance=ExtResource("33_mfbkh")]
+
+[node name="candy-cane-green2" parent="." instance=ExtResource("34_aet4k")]
+
+[node name="candy-cane-red2" parent="." instance=ExtResource("35_1fth0")]
+
+[node name="festivus-pole2" parent="." instance=ExtResource("36_21h2x")]
+
+[node name="floor-stone2" parent="." instance=ExtResource("37_4cjbd")]
+
+[node name="floor-wood-snow2" parent="." instance=ExtResource("38_kk0vx")]
+
+[node name="floor-wood2" parent="." instance=ExtResource("39_7wwhm")]
+
+[node name="gingerbread-man2" parent="." instance=ExtResource("40_apqoq")]
+
+[node name="gingerbread-woman2" parent="." instance=ExtResource("41_grywt")]
+
+[node name="hanukkah-dreidel2" parent="." instance=ExtResource("42_ygwmw")]
+
+[node name="hanukkah-menorah-candles2" parent="." instance=ExtResource("43_wbe6j")]
+
+[node name="hanukkah-menorah2" parent="." instance=ExtResource("44_yoytp")]
+
+[node name="kwanzaa-kikombe2" parent="." instance=ExtResource("45_j5bh4")]
+
+[node name="kwanzaa-kinara-alternative2" parent="." instance=ExtResource("46_u0whh")]
+
+[node name="kwanzaa-kinara2" parent="." instance=ExtResource("47_q6ktq")]
+
+[node name="lantern-hanging2" parent="." instance=ExtResource("48_3x3be")]
+
+[node name="lantern2" parent="." instance=ExtResource("49_lg3dx")]
+
+[node name="lights-colored2" parent="." instance=ExtResource("50_gyc3j")]
+
+[node name="lights-green2" parent="." instance=ExtResource("51_ojnaw")]
+
+[node name="lights-red2" parent="." instance=ExtResource("52_wveex")]
+
+[node name="nutcracker2" parent="." instance=ExtResource("53_gfe73")]
+
+[node name="present-a-cube2" parent="." instance=ExtResource("54_wjpir")]
+
+[node name="present-a-rectangle2" parent="." instance=ExtResource("55_12f0q")]
+
+[node name="present-a-round2" parent="." instance=ExtResource("56_luusg")]
+
+[node name="present-b-cube2" parent="." instance=ExtResource("57_f8ee8")]
+
+[node name="present-b-rectangle2" parent="." instance=ExtResource("58_2c3ep")]
+
+[node name="present-b-round2" parent="." instance=ExtResource("59_7ow8i")]
+
+[node name="reindeer2" parent="." instance=ExtResource("60_ustm8")]
+
+[node name="rocks-large2" parent="." instance=ExtResource("61_vlnyl")]
+
+[node name="rocks-medium2" parent="." instance=ExtResource("62_ansa8")]
+
+[node name="rocks-small2" parent="." instance=ExtResource("63_ks14d")]
+
+[node name="sled-long2" parent="." instance=ExtResource("64_6wad4")]
+
+[node name="sled2" parent="." instance=ExtResource("65_nmkf2")]
+
+[node name="snow-bunker2" parent="." instance=ExtResource("66_ucnuk")]
+
+[node name="snow-flat-large2" parent="." instance=ExtResource("67_renrv")]
+
+[node name="snow-flat2" parent="." instance=ExtResource("68_vvinx")]
+
+[node name="snow-pile2" parent="." instance=ExtResource("69_lklmn")]
+
+[node name="snowflake-a2" parent="." instance=ExtResource("70_5raaf")]
+
+[node name="snowflake-b2" parent="." instance=ExtResource("71_emgqu")]
+
+[node name="snowflake-c2" parent="." instance=ExtResource("72_bdrg8")]
+
+[node name="snowman-hat2" parent="." instance=ExtResource("73_l4y0v")]
+
+[node name="snowman2" parent="." instance=ExtResource("74_q34lf")]
+
+[node name="sock-green-cane2" parent="." instance=ExtResource("75_rlf2u")]
+
+[node name="sock-green2" parent="." instance=ExtResource("76_jyq1b")]
+
+[node name="sock-red-cane2" parent="." instance=ExtResource("77_s4l4j")]
+
+[node name="sock-red2" parent="." instance=ExtResource("78_c62v3")]
+
+[node name="train-locomotive2" parent="." instance=ExtResource("79_rixsf")]
+
+[node name="train-tender2" parent="." instance=ExtResource("80_58cub")]
+
+[node name="train-wagon-flat-short2" parent="." instance=ExtResource("81_fg27b")]
+
+[node name="train-wagon-flat2" parent="." instance=ExtResource("82_xn4gr")]
+
+[node name="train-wagon-logs2" parent="." instance=ExtResource("83_swyi2")]
+
+[node name="train-wagon-short2" parent="." instance=ExtResource("84_so7hm")]
+
+[node name="train-wagon2" parent="." instance=ExtResource("85_jk5q2")]
+
+[node name="trainset-rail-bend" parent="." instance=ExtResource("86_tehk7")]
+
+[node name="trainset-rail-corner2" parent="." instance=ExtResource("87_qa724")]
+
+[node name="trainset-rail-detailed-bend2" parent="." instance=ExtResource("88_fv26r")]
+
+[node name="trainset-rail-detailed-corner2" parent="." instance=ExtResource("89_gn5x6")]
+
+[node name="trainset-rail-detailed-straight2" parent="." instance=ExtResource("90_8u023")]
+
+[node name="trainset-rail-straight2" parent="." instance=ExtResource("91_p5uvb")]
+
+[node name="tree-decorated-snow2" parent="." instance=ExtResource("92_4g1uc")]
+
+[node name="tree-decorated2" parent="." instance=ExtResource("93_cnxdn")]
+
+[node name="tree-snow-a2" parent="." instance=ExtResource("94_jb1t4")]
+
+[node name="tree-snow-b2" parent="." instance=ExtResource("95_phiiv")]
+
+[node name="tree-snow-c2" parent="." instance=ExtResource("96_k5sda")]
+
+[node name="tree2" parent="." instance=ExtResource("97_7kbmt")]
+
+[node name="wreath-decorated2" parent="." instance=ExtResource("98_0s4fe")]
+
+[node name="wreath2" parent="." instance=ExtResource("99_10uo6")]

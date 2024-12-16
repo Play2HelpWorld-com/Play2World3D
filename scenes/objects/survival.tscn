@@ -1,0 +1,244 @@
+[gd_scene load_steps=81 format=3 uid="uid://bhs2flu6swtjv"]
+
+[ext_resource type="PackedScene" uid="uid://jovbd647pgir" path="res://assets/survival/barrel-open.glb" id="1_4xnv4"]
+[ext_resource type="PackedScene" uid="uid://ceb22nqbegcvs" path="res://assets/survival/barrel.glb" id="2_qxtm4"]
+[ext_resource type="PackedScene" uid="uid://cqf6r0s0kmqy0" path="res://assets/survival/bedroll-frame.glb" id="3_nwehy"]
+[ext_resource type="PackedScene" uid="uid://ds0np4wy762r3" path="res://assets/survival/bedroll-packed.glb" id="4_ni0f2"]
+[ext_resource type="PackedScene" uid="uid://bujjmhx0t35p0" path="res://assets/survival/bedroll.glb" id="5_45loq"]
+[ext_resource type="PackedScene" uid="uid://b73y5782fnyt3" path="res://assets/survival/bottle-large.glb" id="6_ucl8q"]
+[ext_resource type="PackedScene" uid="uid://cvh7druouvhkd" path="res://assets/survival/bottle.glb" id="7_d0lfl"]
+[ext_resource type="PackedScene" uid="uid://861034l5wbed" path="res://assets/survival/box-large-open.glb" id="8_q54rh"]
+[ext_resource type="PackedScene" uid="uid://7bmr7iha2plh" path="res://assets/survival/box-large.glb" id="9_u3fjs"]
+[ext_resource type="PackedScene" uid="uid://hlkhbku3dwmq" path="res://assets/survival/box-open.glb" id="10_h3v54"]
+[ext_resource type="PackedScene" uid="uid://kkoe8nl5xidx" path="res://assets/survival/box.glb" id="11_3xkdk"]
+[ext_resource type="PackedScene" uid="uid://cg1vtuswodtw7" path="res://assets/survival/bucket.glb" id="12_s2qxw"]
+[ext_resource type="PackedScene" uid="uid://r0dvddglxacb" path="res://assets/survival/campfire-fishing-stand.glb" id="13_e0hhq"]
+[ext_resource type="PackedScene" uid="uid://b5cnkr31x0yhf" path="res://assets/survival/campfire-pit.glb" id="14_2vtdn"]
+[ext_resource type="PackedScene" uid="uid://pcr8rirasgiq" path="res://assets/survival/campfire-stand.glb" id="15_j82lk"]
+[ext_resource type="PackedScene" uid="uid://cm7nqi2xj262v" path="res://assets/survival/chest.glb" id="16_jqrkd"]
+[ext_resource type="PackedScene" uid="uid://kpvcyur50lue" path="res://assets/survival/fence-doorway.glb" id="17_wefcv"]
+[ext_resource type="PackedScene" uid="uid://b1o4nk5t7dhmb" path="res://assets/survival/fence-fortified.glb" id="18_8810g"]
+[ext_resource type="PackedScene" uid="uid://c4csrb3lljaq1" path="res://assets/survival/fence.glb" id="19_q0cbh"]
+[ext_resource type="PackedScene" uid="uid://duju5vq6x72eu" path="res://assets/survival/fish-large.glb" id="20_ttx5e"]
+[ext_resource type="PackedScene" uid="uid://dgj1bl0qes0ic" path="res://assets/survival/fish.glb" id="21_kxina"]
+[ext_resource type="PackedScene" uid="uid://qt7a750thc7l" path="res://assets/survival/floor-hole.glb" id="22_lfih6"]
+[ext_resource type="PackedScene" uid="uid://cmuhn6raoy6n6" path="res://assets/survival/floor-old.glb" id="23_nmdm7"]
+[ext_resource type="PackedScene" uid="uid://b7x1rd856ciri" path="res://assets/survival/floor.glb" id="24_soaw6"]
+[ext_resource type="PackedScene" uid="uid://c0uutbgbdftkj" path="res://assets/survival/grass-large.glb" id="25_d6elw"]
+[ext_resource type="PackedScene" uid="uid://loirotf62y1a" path="res://assets/survival/grass.glb" id="26_qy57e"]
+[ext_resource type="PackedScene" uid="uid://fju8eduw75ig" path="res://assets/survival/metal-panel-narrow.glb" id="27_67wbu"]
+[ext_resource type="PackedScene" uid="uid://boqqran0ndwky" path="res://assets/survival/metal-panel-screws-half.glb" id="28_cnew1"]
+[ext_resource type="PackedScene" uid="uid://dy68t2ftop5f6" path="res://assets/survival/metal-panel-screws-narrow.glb" id="29_gpwjj"]
+[ext_resource type="PackedScene" uid="uid://bkdrptsspwbcf" path="res://assets/survival/metal-panel-screws.glb" id="30_o55am"]
+[ext_resource type="PackedScene" uid="uid://c8ftmyxj33fu4" path="res://assets/survival/metal-panel.glb" id="31_vdx31"]
+[ext_resource type="PackedScene" uid="uid://bvq4spx3lipf8" path="res://assets/survival/patch-grass-large.glb" id="32_lc0s4"]
+[ext_resource type="PackedScene" uid="uid://dws5s5ot1ocgv" path="res://assets/survival/patch-grass.glb" id="33_eb5wg"]
+[ext_resource type="PackedScene" uid="uid://cbykhg6gc827j" path="res://assets/survival/resource-planks.glb" id="34_la0hv"]
+[ext_resource type="PackedScene" uid="uid://ln0icf278xf" path="res://assets/survival/resource-stone-large.glb" id="35_oruo1"]
+[ext_resource type="PackedScene" uid="uid://bbfa5k18jsjfm" path="res://assets/survival/resource-stone.glb" id="36_a0g5s"]
+[ext_resource type="PackedScene" uid="uid://cp0qw0nr8m3mu" path="res://assets/survival/resource-wood.glb" id="37_hd04x"]
+[ext_resource type="PackedScene" uid="uid://dl0f6eq1booq8" path="res://assets/survival/rock-a.glb" id="38_bp6qv"]
+[ext_resource type="PackedScene" uid="uid://2ol6oe0ciff1" path="res://assets/survival/rock-b.glb" id="39_ur4jc"]
+[ext_resource type="PackedScene" uid="uid://c8hmqde0g4xpd" path="res://assets/survival/rock-c.glb" id="40_gx710"]
+[ext_resource type="PackedScene" uid="uid://dsakbuh54hv08" path="res://assets/survival/rock-flat-grass.glb" id="41_ux74o"]
+[ext_resource type="PackedScene" uid="uid://ba06py4uqhljf" path="res://assets/survival/rock-flat.glb" id="42_4kpa0"]
+[ext_resource type="PackedScene" uid="uid://btdf00kb5gddd" path="res://assets/survival/rock-sand-a.glb" id="43_ol6yw"]
+[ext_resource type="PackedScene" uid="uid://jt1axpv3dggm" path="res://assets/survival/rock-sand-b.glb" id="44_hthfw"]
+[ext_resource type="PackedScene" uid="uid://bf0mehntfq5xy" path="res://assets/survival/rock-sand-c.glb" id="45_43tl7"]
+[ext_resource type="PackedScene" uid="uid://ce7jmilv33pt" path="res://assets/survival/signpost-single.glb" id="46_v2e42"]
+[ext_resource type="PackedScene" uid="uid://rx2uk7s40cg6" path="res://assets/survival/signpost.glb" id="47_0ibia"]
+[ext_resource type="PackedScene" uid="uid://bfy5ojd1w0to8" path="res://assets/survival/structure-canvas.glb" id="48_6m4vh"]
+[ext_resource type="PackedScene" uid="uid://6tvu4pa5qx45" path="res://assets/survival/structure-floor.glb" id="49_fmpwh"]
+[ext_resource type="PackedScene" uid="uid://cy0tkxj561wio" path="res://assets/survival/structure-metal-doorway.glb" id="50_t864q"]
+[ext_resource type="PackedScene" uid="uid://dnrm25u7yu47f" path="res://assets/survival/structure-metal-floor.glb" id="51_g1qey"]
+[ext_resource type="PackedScene" uid="uid://y80nfkmgssxx" path="res://assets/survival/structure-metal-roof.glb" id="52_8bqrk"]
+[ext_resource type="PackedScene" uid="uid://cexlg7bx4stxc" path="res://assets/survival/structure-metal-wall.glb" id="53_rixri"]
+[ext_resource type="PackedScene" uid="uid://byfktd02qixh8" path="res://assets/survival/structure-metal.glb" id="54_75os0"]
+[ext_resource type="PackedScene" uid="uid://c7f8rsdadip0i" path="res://assets/survival/structure-roof.glb" id="55_e08wf"]
+[ext_resource type="PackedScene" uid="uid://c8jedvkcmoq7v" path="res://assets/survival/structure.glb" id="56_3tubk"]
+[ext_resource type="PackedScene" uid="uid://dq4x3ca3c7or1" path="res://assets/survival/tent-canvas-half.glb" id="57_y5xao"]
+[ext_resource type="PackedScene" uid="uid://cacyd5yi2mhut" path="res://assets/survival/tent-canvas.glb" id="58_0qm3j"]
+[ext_resource type="PackedScene" uid="uid://dh2bh0ylk0uq2" path="res://assets/survival/tent.glb" id="59_vq0co"]
+[ext_resource type="PackedScene" uid="uid://bmmfx4n1p40m" path="res://assets/survival/tool-axe-upgraded.glb" id="60_irobw"]
+[ext_resource type="PackedScene" uid="uid://c1p8noolu3oqm" path="res://assets/survival/tool-axe.glb" id="61_gvnmo"]
+[ext_resource type="PackedScene" uid="uid://cy0c73mdpbpa6" path="res://assets/survival/tool-hammer-upgraded.glb" id="62_k4vru"]
+[ext_resource type="PackedScene" uid="uid://nkhvnrr0gfoh" path="res://assets/survival/tool-hammer.glb" id="63_8cmnj"]
+[ext_resource type="PackedScene" uid="uid://brrf2dnfdx8w7" path="res://assets/survival/tool-hoe-upgraded.glb" id="64_4gmma"]
+[ext_resource type="PackedScene" uid="uid://qaa8amsnc60f" path="res://assets/survival/tool-hoe.glb" id="65_o7lb2"]
+[ext_resource type="PackedScene" uid="uid://dbuvkqietkvpr" path="res://assets/survival/tool-pickaxe-upgraded.glb" id="66_otasf"]
+[ext_resource type="PackedScene" uid="uid://cvhggax0b4uc6" path="res://assets/survival/tool-pickaxe.glb" id="67_ipv3n"]
+[ext_resource type="PackedScene" uid="uid://bkeriie2we2" path="res://assets/survival/tool-shovel-upgraded.glb" id="68_eaugd"]
+[ext_resource type="PackedScene" uid="uid://m0doypmaca2x" path="res://assets/survival/tool-shovel.glb" id="69_r2wad"]
+[ext_resource type="PackedScene" uid="uid://lel4i47q01vm" path="res://assets/survival/tree-autumn-tall.glb" id="70_k7sa8"]
+[ext_resource type="PackedScene" uid="uid://eyh4jul7blja" path="res://assets/survival/tree-autumn-trunk.glb" id="71_fori3"]
+[ext_resource type="PackedScene" uid="uid://l1ecf5fpxboo" path="res://assets/survival/tree-autumn.glb" id="72_m8y8n"]
+[ext_resource type="PackedScene" uid="uid://ckjj8gkhtv662" path="res://assets/survival/tree-log-small.glb" id="73_4nxtt"]
+[ext_resource type="PackedScene" uid="uid://bds7dw86bh5vu" path="res://assets/survival/tree-log.glb" id="74_6b6a3"]
+[ext_resource type="PackedScene" uid="uid://biiott0ljs2d" path="res://assets/survival/tree-tall.glb" id="75_tbaku"]
+[ext_resource type="PackedScene" uid="uid://bbou31sfljg5" path="res://assets/survival/tree-trunk.glb" id="76_pmib8"]
+[ext_resource type="PackedScene" uid="uid://da37374dc1rpt" path="res://assets/survival/tree.glb" id="77_xokd0"]
+[ext_resource type="PackedScene" uid="uid://b2hpxb34654c1" path="res://assets/survival/workbench-anvil.glb" id="78_av0do"]
+[ext_resource type="PackedScene" uid="uid://dnvy3ascm728s" path="res://assets/survival/workbench-grind.glb" id="79_ld7fj"]
+[ext_resource type="PackedScene" uid="uid://d0be8dy53xo75" path="res://assets/survival/workbench.glb" id="80_eoiro"]
+
+[node name="survival" type="Node3D"]
+
+[node name="barrel-open2" parent="." instance=ExtResource("1_4xnv4")]
+
+[node name="barrel2" parent="." instance=ExtResource("2_qxtm4")]
+
+[node name="bedroll-frame2" parent="." instance=ExtResource("3_nwehy")]
+
+[node name="bedroll-packed2" parent="." instance=ExtResource("4_ni0f2")]
+
+[node name="bedroll2" parent="." instance=ExtResource("5_45loq")]
+
+[node name="bottle-large2" parent="." instance=ExtResource("6_ucl8q")]
+
+[node name="bottle2" parent="." instance=ExtResource("7_d0lfl")]
+
+[node name="box-large-open2" parent="." instance=ExtResource("8_q54rh")]
+
+[node name="box-large2" parent="." instance=ExtResource("9_u3fjs")]
+
+[node name="box-open2" parent="." instance=ExtResource("10_h3v54")]
+
+[node name="box2" parent="." instance=ExtResource("11_3xkdk")]
+
+[node name="bucket2" parent="." instance=ExtResource("12_s2qxw")]
+
+[node name="campfire-fishing-stand2" parent="." instance=ExtResource("13_e0hhq")]
+
+[node name="campfire-pit2" parent="." instance=ExtResource("14_2vtdn")]
+
+[node name="campfire-stand2" parent="." instance=ExtResource("15_j82lk")]
+
+[node name="chest2" parent="." instance=ExtResource("16_jqrkd")]
+
+[node name="fence-doorway2" parent="." instance=ExtResource("17_wefcv")]
+
+[node name="fence-fortified2" parent="." instance=ExtResource("18_8810g")]
+
+[node name="fence2" parent="." instance=ExtResource("19_q0cbh")]
+
+[node name="fish-large2" parent="." instance=ExtResource("20_ttx5e")]
+
+[node name="fish2" parent="." instance=ExtResource("21_kxina")]
+
+[node name="floor-hole2" parent="." instance=ExtResource("22_lfih6")]
+
+[node name="floor-old2" parent="." instance=ExtResource("23_nmdm7")]
+
+[node name="floor2" parent="." instance=ExtResource("24_soaw6")]
+
+[node name="grass-large2" parent="." instance=ExtResource("25_d6elw")]
+
+[node name="grass2" parent="." instance=ExtResource("26_qy57e")]
+
+[node name="metal-panel-narrow2" parent="." instance=ExtResource("27_67wbu")]
+
+[node name="metal-panel-screws-half2" parent="." instance=ExtResource("28_cnew1")]
+
+[node name="metal-panel-screws-narrow2" parent="." instance=ExtResource("29_gpwjj")]
+
+[node name="metal-panel-screws2" parent="." instance=ExtResource("30_o55am")]
+
+[node name="metal-panel2" parent="." instance=ExtResource("31_vdx31")]
+
+[node name="patch-grass-large2" parent="." instance=ExtResource("32_lc0s4")]
+
+[node name="patch-grass2" parent="." instance=ExtResource("33_eb5wg")]
+
+[node name="resource-planks2" parent="." instance=ExtResource("34_la0hv")]
+
+[node name="resource-stone-large2" parent="." instance=ExtResource("35_oruo1")]
+
+[node name="resource-stone2" parent="." instance=ExtResource("36_a0g5s")]
+
+[node name="resource-wood2" parent="." instance=ExtResource("37_hd04x")]
+
+[node name="rock-a2" parent="." instance=ExtResource("38_bp6qv")]
+
+[node name="rock-b2" parent="." instance=ExtResource("39_ur4jc")]
+
+[node name="rock-c2" parent="." instance=ExtResource("40_gx710")]
+
+[node name="rock-flat-grass2" parent="." instance=ExtResource("41_ux74o")]
+
+[node name="rock-flat2" parent="." instance=ExtResource("42_4kpa0")]
+
+[node name="rock-sand-a2" parent="." instance=ExtResource("43_ol6yw")]
+
+[node name="rock-sand-b2" parent="." instance=ExtResource("44_hthfw")]
+
+[node name="rock-sand-c2" parent="." instance=ExtResource("45_43tl7")]
+
+[node name="signpost-single2" parent="." instance=ExtResource("46_v2e42")]
+
+[node name="signpost2" parent="." instance=ExtResource("47_0ibia")]
+
+[node name="structure-canvas2" parent="." instance=ExtResource("48_6m4vh")]
+
+[node name="structure-floor2" parent="." instance=ExtResource("49_fmpwh")]
+
+[node name="structure-metal-doorway2" parent="." instance=ExtResource("50_t864q")]
+
+[node name="structure-metal-floor2" parent="." instance=ExtResource("51_g1qey")]
+
+[node name="structure-metal-roof2" parent="." instance=ExtResource("52_8bqrk")]
+
+[node name="structure-metal-wall2" parent="." instance=ExtResource("53_rixri")]
+
+[node name="structure-metal2" parent="." instance=ExtResource("54_75os0")]
+
+[node name="structure-roof2" parent="." instance=ExtResource("55_e08wf")]
+
+[node name="structure2" parent="." instance=ExtResource("56_3tubk")]
+
+[node name="tent-canvas-half2" parent="." instance=ExtResource("57_y5xao")]
+
+[node name="tent-canvas2" parent="." instance=ExtResource("58_0qm3j")]
+
+[node name="tent2" parent="." instance=ExtResource("59_vq0co")]
+
+[node name="tool-axe-upgraded2" parent="." instance=ExtResource("60_irobw")]
+
+[node name="tool-axe2" parent="." instance=ExtResource("61_gvnmo")]
+
+[node name="tool-hammer-upgraded2" parent="." instance=ExtResource("62_k4vru")]
+
+[node name="tool-hammer2" parent="." instance=ExtResource("63_8cmnj")]
+
+[node name="tool-hoe-upgraded2" parent="." instance=ExtResource("64_4gmma")]
+
+[node name="tool-hoe2" parent="." instance=ExtResource("65_o7lb2")]
+
+[node name="tool-pickaxe-upgraded2" parent="." instance=ExtResource("66_otasf")]
+
+[node name="tool-pickaxe2" parent="." instance=ExtResource("67_ipv3n")]
+
+[node name="tool-shovel-upgraded2" parent="." instance=ExtResource("68_eaugd")]
+
+[node name="tool-shovel2" parent="." instance=ExtResource("69_r2wad")]
+
+[node name="tree-autumn-tall2" parent="." instance=ExtResource("70_k7sa8")]
+
+[node name="tree-autumn-trunk2" parent="." instance=ExtResource("71_fori3")]
+
+[node name="tree-autumn2" parent="." instance=ExtResource("72_m8y8n")]
+
+[node name="tree-log-small2" parent="." instance=ExtResource("73_4nxtt")]
+
+[node name="tree-log2" parent="." instance=ExtResource("74_6b6a3")]
+
+[node name="tree-tall2" parent="." instance=ExtResource("75_tbaku")]
+
+[node name="tree-trunk2" parent="." instance=ExtResource("76_pmib8")]
+
+[node name="tree2" parent="." instance=ExtResource("77_xokd0")]
+
+[node name="workbench-anvil2" parent="." instance=ExtResource("78_av0do")]
+
+[node name="workbench-grind2" parent="." instance=ExtResource("79_ld7fj")]
+
+[node name="workbench2" parent="." instance=ExtResource("80_eoiro")]
