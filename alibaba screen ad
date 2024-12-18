@@ -1,0 +1,157 @@
+
+
+// Constants
+const SCREEN_WIDTH: number = 800;
+const SCREEN_HEIGHT: number = 600;
+const FPS: number = 60;
+
+// Get the canvas element
+const canvas: HTMLCanvasElement = document.getElementById("gameCanvas") as HTMLCanvasElement;
+
+// Get the 2D drawing context
+const ctx: CanvasRenderingContext2D = canvas.getContext("2d") as CanvasRenderingContext2D;
+
+// Set the canvas dimensions
+canvas.width = SCREEN_WIDTH;
+canvas.height = SCREEN_HEIGHT;
+
+// Game variables
+let inGameCurrency: number = 0;
+let adsEnabled: boolean = true;
+let adDisplayed: boolean = false;
+
+// Ad container
+const adContainer: HTMLElement = document.getElementById("adContainer") as HTMLElement;
+
+// Ad configuration
+const adConfig = {
+adImage: "(link unavailable)",
+adHeadline: "Luxury Bags Sale!",
+adDescription: "Get up to 50% off on our latest collection of luxury bags.",
+adCallToAction: "Shop Now",
+adUrl: "(link unavailable)"
+};
+
+// Function to log events
+function logEvent(event: string): void {
+console.log(`Logging event: ${event}`);
+}
+
+// Function to display ads
+function displayAds(): void {
+if (adsEnabled && !adDisplayed) {
+try {
+console.log("Displaying ad...");
+logEvent("Ad displayed"); // Log the ad display event
+adContainer.style.display = "flex"; // Show ad
+adDisplayed = true;
+
+```  // Create ad image
+  const adImage: HTMLImageElement = document.createElement("img");
+  adImage.src = adConfig.adImage;
+  adImage.style.width = "100%";
+  adImage.style.height = "150px";
+  adContainer.appendChild(adImage);
+
+  // Create ad headline
+  const adHeadline: HTMLHeadingElement = document.createElement("h2");
+  adHeadline.textContent = adConfig.adHeadline;
+  adHeadline.style.fontSize = "18px";
+  adHeadline.style.fontWeight = "bold";
+  adContainer.appendChild(adHeadline);
+
+  // Create ad description
+  const adDescription: HTMLParagraphElement = document.createElement("p");
+  adDescription.textContent = adConfig.adDescription;
+  adDescription.style.fontSize = "14px";
+  adDescription.style.color = "#666";
+  adContainer.appendChild(adDescription);
+
+  // Create ad call-to-action
+  const adCallToAction: HTMLButtonElement = document.createElement("button");
+  adCallToAction.textContent = adConfig.adCallToAction;
+  adCallToAction.style.backgroundColor = "#4CAF50";
+  adCallToAction.style.color = "#fff";
+  adCallToAction.style.padding = "10px 20px";
+  adCallToAction.style.border = "none";
+  adCallToAction.style.cursor = "pointer";
+  adCallToAction.addEventListener("click", () => {
+    window.open(adConfig.adUrl, "_blank");
+  });
+  adContainer.appendChild(adCallToAction);
+} catch (e) {
+  console.error(`Error displaying ad: ${e}`);
+  logEvent(`Ad display error: ${e}`); // Log the error
+}
+```
+}
+}
+
+// Function to manage user preferences for ads
+function toggleAds(): void {
+adsEnabled = !adsEnabled;
+console.log(`Ads enabled: ${adsEnabled}`);
+if (!adsEnabled) {
+adContainer.style.display = "none"; // Hide ad
+adDisplayed = false;
+}
+}
+
+function manageAdPreferences(): void {
+toggleAds(); // Toggle the ads on/off
+}
+
+// Function to simulate earning in-game currency
+function earnCurrency(amount: number): void {
+inGameCurrency += amount;
+console.log(`Earning currency: ${amount}. Total: ${inGameCurrency}`);
+}
+
+// Function to draw the user interface
+function drawUI(): void {
+ctx.font = "24px Arial";
+ctx.fillStyle = "white";
+ctx.fillText(`In-Game Currency: $${inGameCurrency}`, 10, 30);
+const adButtonText: string = adsEnabled ? "Disable Ads" : "Enable Ads";
+ctx.fillText(adButtonText, 10, 70);
+}
+
+// Function to close the ad
+function closeAd(): void {
+adContainer.style.display = "none";
+adDisplayed = false;
+}
+
+// Event listener for canvas click (to toggle ads)
+canvas.addEventListener('click', (event: MouseEvent) => {
+// Check if the ad button is clicked
+if (event.clientY >= 50 && event.clientY <= 80) {
+manageAdPreferences();
+}
+});
+
+// Main game loop
+function gameLoop(): void {
+// Clear the canvas
+ctx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+
+// Randomly display ads
+if (Math.random() < 0.1 && adsEnabled) {
+displayAds();
+}
+
+// Simulate earning currency
+if (Math.random() < 0.05) {
+earnCurrency(Math.floor(Math.random() * 100) + 1);
+}
+
+// Draw the user interface
+drawUI();
+
+// Request next frame
+setTimeout(gameLoop, 1000 / FPS);
+}
+
+// Start the game loop
+gameLoop();
