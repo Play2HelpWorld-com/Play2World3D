@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uj43wii7p7ue"
+uid="uid://drfekchj5w15l"
 path.s3tc="res://.godot/imported/Tree_Floating_3_Atlas.png-cf68f798916451f1fad2c3d7a84230a0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

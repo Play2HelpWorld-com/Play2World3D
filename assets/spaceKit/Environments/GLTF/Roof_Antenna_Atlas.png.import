@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3hsfffdkchl2"
+uid="uid://ddvyoqnoalyo0"
 path.s3tc="res://.godot/imported/Roof_Antenna_Atlas.png-730f684fa6a8edda816001b0da017324.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

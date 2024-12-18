@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt237ps2xpsen"
+uid="uid://dkpt7dfd7cky3"
 path.s3tc="res://.godot/imported/Roof_Opening_Atlas.png-b83dd00eaa6ffc76b04f9a83ccd1b2ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

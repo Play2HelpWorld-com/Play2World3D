@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwyxlj4ytlul"
+uid="uid://bbropqmulqx8v"
 path.s3tc="res://.godot/imported/Rover_1_Atlas.png-6cd825c3a287969cb3776ac7d0bf1cd7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

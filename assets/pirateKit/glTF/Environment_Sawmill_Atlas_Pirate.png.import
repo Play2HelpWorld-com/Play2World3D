@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bruasnhh2adgm"
+uid="uid://cdgjh2dmjvuq"
 path.s3tc="res://.godot/imported/Environment_Sawmill_Atlas_Pirate.png-ed8b617b356efb4d8b2354912a1bcbf6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

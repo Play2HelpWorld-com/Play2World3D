@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcgdq0jdcmbdj"
+uid="uid://bckfdurys01mu"
 path.s3tc="res://.godot/imported/Pickup_Health_Atlas.png-2e3437dd68552424601add297ee4ee6d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

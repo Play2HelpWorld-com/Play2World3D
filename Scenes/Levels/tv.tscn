@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgadx25qutdxu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ldk7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_eampg"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_otcry"]
+viewport_path = NodePath("Node2D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qcq7"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_otcry")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_vioor"]
+file = "res://tv and vids/big-buck-bunny_trailer.ogv"
+
+[node name="TV" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_eampg")
+surface_material_override/0 = SubResource("StandardMaterial3D_3qcq7")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="SubViewport" type="SubViewport" parent="Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_vioor")
+autoplay = true
+
+[node name="SubViewport" type="SubViewport" parent="Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(7680, 4320)
+render_target_update_mode = 4

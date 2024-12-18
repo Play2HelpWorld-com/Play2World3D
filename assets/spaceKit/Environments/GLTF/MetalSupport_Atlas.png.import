@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqvqhe5qnninn"
+uid="uid://c4wq8xccrxjl4"
 path.s3tc="res://.godot/imported/MetalSupport_Atlas.png-c64244d1b3bb0e82765edff86a47db8b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

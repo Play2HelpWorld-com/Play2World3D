@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y44pmgt6c3x0"
+uid="uid://dsadrco5daxk7"
 path.s3tc="res://.godot/imported/Ramp_Atlas.png-2adc39c987e7fbca5ba6b679bed73f52.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

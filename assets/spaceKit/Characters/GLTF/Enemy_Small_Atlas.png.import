@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx471ixe66j8"
+uid="uid://d4d8owwwnhmdt"
 path.s3tc="res://.godot/imported/Enemy_Small_Atlas.png-d142b07d5c188e6e1ac0bb2cc5445cc1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

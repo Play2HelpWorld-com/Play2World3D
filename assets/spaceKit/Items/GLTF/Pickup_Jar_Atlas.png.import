@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dymgfuwcgd1ca"
+uid="uid://ftshu55re27e"
 path.s3tc="res://.godot/imported/Pickup_Jar_Atlas.png-07b21da7f839cfedf8a773c68609c4dd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

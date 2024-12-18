@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p7ra52wom7ym"
+uid="uid://mj7b2o0r7naa"
 path.s3tc="res://.godot/imported/Tree_Spiral_2_Atlas.png-08ac726e757c775e1f928024aef8ad1c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

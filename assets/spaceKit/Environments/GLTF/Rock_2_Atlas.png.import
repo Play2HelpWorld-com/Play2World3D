@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4ck54uxi2nm0"
+uid="uid://kh5uc8xi6k6s"
 path.s3tc="res://.godot/imported/Rock_2_Atlas.png-599516c09828670c745cda90d7c8bb06.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

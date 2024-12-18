@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmqjpp88uftrg"
+uid="uid://t7hma11p8kjy"
 path.s3tc="res://.godot/imported/UI_ChickenLeg_Atlas_Pirate.png-73be486e887b3a0ce92a24cc0b5d8d48.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

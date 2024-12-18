@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btp6ekwi4tyw7"
+uid="uid://b0ouanyw8a3xs"
 path.s3tc="res://.godot/imported/Spaceship_FernandoTheFlamingo_Atlas.png-8c26851a868f2ff74f97c726a80e93d9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

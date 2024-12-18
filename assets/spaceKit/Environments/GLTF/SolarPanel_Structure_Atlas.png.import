@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb4g5ty5on36b"
+uid="uid://cjh0fu0mmm3ox"
 path.s3tc="res://.godot/imported/SolarPanel_Structure_Atlas.png-46fa319a2a3bad997056b4c03b4f9fc7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

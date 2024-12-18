@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csc36x8rgm5u"
+uid="uid://b8ms4i3pjjxmc"
 path.s3tc="res://.godot/imported/Spaceship_RaeTheRedPanda_Atlas.png-2742dd661d4c09c46bd1ab3f05650787.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

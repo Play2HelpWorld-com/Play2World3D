@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dua7skqbgfhnp"
+path="res://.godot/imported/big-buck-bunny_trailer.ogg-1de3322a8830bf39caca0d00f0738a7b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Scenes/Levels/tv and vids/big-buck-bunny_trailer.ogg"
+dest_files=["res://.godot/imported/big-buck-bunny_trailer.ogg-1de3322a8830bf39caca0d00f0738a7b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://spw3xes1tjhq"
+uid="uid://c3ac5io4bfxpa"
 path.s3tc="res://.godot/imported/Prop_Fish_Tuna_Atlas_Pirate.png-105af7ae96dba4269948274f2d738f07.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

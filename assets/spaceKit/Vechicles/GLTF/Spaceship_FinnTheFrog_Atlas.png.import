@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://12ts1v6ah4t0"
+uid="uid://byyp735bgibkn"
 path.s3tc="res://.godot/imported/Spaceship_FinnTheFrog_Atlas.png-c6d50c9a4c38b04c1181e0abfc6d1cdf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

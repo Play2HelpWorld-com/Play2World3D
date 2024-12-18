@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbhho1s38cfwu"
+uid="uid://c1v8g8v2agk5x"
 path.s3tc="res://.godot/imported/Plant_3_Atlas.png-abc144d82d7c3f8cd9040da3efb12fe6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

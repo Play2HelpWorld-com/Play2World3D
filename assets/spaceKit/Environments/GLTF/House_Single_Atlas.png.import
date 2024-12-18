@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mtqgkw6jh00"
+uid="uid://cr8rqhup1cf47"
 path.s3tc="res://.godot/imported/House_Single_Atlas.png-ff514f658cc35fe4f62dfeffad5710a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0evjkngu8asp"
+uid="uid://bnjk7bql8nfh"
 path.s3tc="res://.godot/imported/Environment_PalmTree_2_Atlas_Pirate.png-06dbd14d5bafc20380ae9e1370794c1c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
