@@ -145,8 +145,6 @@ transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241,
 [node name="cube14" parent="World" instance=ExtResource("13_drtpy")]
 transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241, -0.974547, 1.4522, 2.05595, -15.866, 2.03819, 7.83702)
 
-[node name="GridMap" parent="." instance=ExtResource("11_qjb02")]
-
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
 shadow_enabled = true
@@ -182,5 +180,7 @@ label_settings = SubResource("LabelSettings_38ys3")
 
 [node name="Control" parent="." instance=ExtResource("14_niwjn")]
 script = ExtResource("15_wekp7")
+
+[node name="GridMap" parent="." instance=ExtResource("11_qjb02")]
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
