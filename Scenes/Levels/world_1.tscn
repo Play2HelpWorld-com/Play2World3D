@@ -60,7 +60,7 @@ offset_bottom = 635.0
 script = ExtResource("5_gbv0h")
 
 [node name="tv2" type="MeshInstance3D" parent="."]
-transform = Transform3D(15.2309, -2.75285, -0.0621271, -0.14102, 0.234009, -3.79857, 4.89892, 8.56546, 0.0838102, 135.022, 2.81859, -216.534)
+transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 8.88708, -216.534)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -77,7 +77,7 @@ stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 
 [node name="tv4" type="MeshInstance3D" parent="."]
-transform = Transform3D(15.85, -1.22458, -0.0466395, -0.14102, 0.234009, -3.79857, 2.18133, 8.91323, 0.0933204, 239.77, 3.76039, -114.292)
+transform = Transform3D(12.0071, -47.9585, -0.182588, -0.176275, 1.56006, -6.99736, 15.9937, 36.0215, 0.0599546, 239.77, 9.9696, -114.292)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -95,7 +95,7 @@ autoplay = true
 loop = true
 
 [node name="tv5" type="MeshInstance3D" parent="."]
-transform = Transform3D(15.4982, 2.23626, -0.00789468, -0.14102, 0.234009, -3.79857, -3.97321, 8.71461, 0.104027, -89.2907, 3.76039, -154.26)
+transform = Transform3D(17.931, 26.5754, 0.0253109, -0.176275, 1.56006, -6.99736, -8.85701, 53.7709, 0.190505, -116, 9.10078, -159.063)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -113,7 +113,7 @@ autoplay = true
 loop = true
 
 [node name="tv6" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.32886, 7.99762, 0.0877824, 0.0520121, 0.218812, -3.79886, -14.2227, 4.12192, 0.0313413, -284.448, 6.44806, -59.3483)
+transform = Transform3D(10.9377, 50.2149, 0.15491, 0.0650097, 1.45862, -6.99789, -16.744, 32.8075, 0.0740222, -284.448, 4.05808, -59.3483)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -131,7 +131,7 @@ autoplay = true
 loop = true
 
 [node name="tv29" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.99574, 8.92452, -0.128682, -0.125539, -0.29829, -3.7978, -15.8746, 1.12435, 0.0138558, -303.5, 23.3307, 147.344)
+transform = Transform3D(-5.09573, 57.9918, -0.210367, -0.156924, -1.9886, -6.99594, -19.3393, -15.2642, 0.112197, -246.136, 4.21871, 128.622)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -149,6 +149,6 @@ autoplay = true
 loop = true
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-transform = Transform3D(1131, 0, 0, 0, 1131, 0, 0, 0, 1131, 0, 0, 0)
+transform = Transform3D(1131, 0, 0, 0, 1131, 0, 0, 0, 1131, 4.36205, -5.28638, -3.69482)
 mesh = SubResource("PlaneMesh_jvcnp")
 material = SubResource("StandardMaterial3D_ogx3q")
