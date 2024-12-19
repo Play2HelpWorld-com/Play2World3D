@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpvuachwegd88"
+uid="uid://csyvxh4u3bfma"
 path.s3tc="res://.godot/imported/Environment_LargeBones_Atlas_Pirate.png-8cd3b7927ab60db80a27d22bdcaaf9f4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

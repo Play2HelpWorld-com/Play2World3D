@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lf5gxq8yapey"
+uid="uid://cnl60a1elq6q5"
 path.s3tc="res://.godot/imported/Prop_Cannon_Atlas_Pirate.png-91c9f83acc178f4589221cdebe5cfff9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

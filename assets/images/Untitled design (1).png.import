@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxd86sundiun0"
-path.s3tc="res://.godot/imported/UI_ChickenLeg_Atlas_Pirate.png-73be486e887b3a0ce92a24cc0b5d8d48.s3tc.ctex"
+uid="uid://oljoh3hw7vgh"
+path.s3tc="res://.godot/imported/Untitled design (1).png-1eb66c6b0678f73616950e7bf5666f14.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/pirateKit/glTF/UI_ChickenLeg_Atlas_Pirate.png"
-dest_files=["res://.godot/imported/UI_ChickenLeg_Atlas_Pirate.png-73be486e887b3a0ce92a24cc0b5d8d48.s3tc.ctex"]
+source_file="res://assets/images/Untitled design (1).png"
+dest_files=["res://.godot/imported/Untitled design (1).png-1eb66c6b0678f73616950e7bf5666f14.s3tc.ctex"]
 
 [params]
 

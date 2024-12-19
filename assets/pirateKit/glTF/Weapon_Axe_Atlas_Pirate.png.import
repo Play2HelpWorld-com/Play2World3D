@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ewthiko7ynew"
+uid="uid://dq7op3v8tccs6"
 path.s3tc="res://.godot/imported/Weapon_Axe_Atlas_Pirate.png-a145e4875a493d959c2c8f4961f25630.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

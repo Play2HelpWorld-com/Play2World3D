@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvhqnlypxfave"
+uid="uid://cg0tc1v8fxhff"
 path.s3tc="res://.godot/imported/Mech_BarbaraTheBee_Atlas.png-cd6c110e8d9384a7ce35cad0c22152a0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

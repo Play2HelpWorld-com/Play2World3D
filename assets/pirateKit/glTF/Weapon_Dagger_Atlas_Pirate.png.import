@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxtt7q3vnqsqh"
+uid="uid://c2lutso1o6j65"
 path.s3tc="res://.godot/imported/Weapon_Dagger_Atlas_Pirate.png-86fee8b1354bdd4e9fd66a2ba1c2330a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
