@@ -29,7 +29,7 @@ tonemap_mode = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_ftb4i"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_do3k2"]
-viewport_path = NodePath("tv4/SubViewport")
+viewport_path = NodePath("Map0/tv4/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjxw4"]
 resource_local_to_scene = true
@@ -51,104 +51,108 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66119, 0)
 
 [node name="chat_ai" parent="." instance=ExtResource("4_kmb2q")]
-visible = false
-offset_left = 613.0
-offset_top = 7.0
-offset_right = 1142.0
-offset_bottom = 635.0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = -4.0
+offset_bottom = -5.0
 script = ExtResource("5_gbv0h")
-
-[node name="tv2" type="MeshInstance3D" parent="."]
-transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 8.88708, -216.534)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv2"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv2/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv2/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-
-[node name="tv4" type="MeshInstance3D" parent="."]
-transform = Transform3D(12.0071, -47.9585, -0.182588, -0.176275, 1.56006, -6.99736, 15.9937, 36.0215, 0.0599546, 239.77, 9.9696, -114.292)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv4"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv4/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv4/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-loop = true
-
-[node name="tv5" type="MeshInstance3D" parent="."]
-transform = Transform3D(17.931, 26.5754, 0.0253109, -0.176275, 1.56006, -6.99736, -8.85701, 53.7709, 0.190505, -116, 9.10078, -159.063)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv5"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv5/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv5/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-loop = true
-
-[node name="tv6" type="MeshInstance3D" parent="."]
-transform = Transform3D(10.9377, 50.2149, 0.15491, 0.0650097, 1.45862, -6.99789, -16.744, 32.8075, 0.0740222, -284.448, 4.05808, -59.3483)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv6"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv6/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv6/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-loop = true
-
-[node name="tv29" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.09573, 57.9918, -0.210367, -0.156924, -1.9886, -6.99594, -19.3393, -15.2642, 0.112197, -246.136, 4.21871, 128.622)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv29"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv29/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv29/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-loop = true
 
 [node name="Map0" parent="." instance=ExtResource("4_wmnsd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.598244, 0)
+
+[node name="tv2" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 9.48532, -216.534)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tv2"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv2/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv2/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+
+[node name="tv4" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(12.0071, -47.9585, -0.182588, -0.176275, 1.56006, -6.99736, 15.9937, 36.0215, 0.0599546, 239.77, 10.5678, -114.292)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tv4"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv4/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv4/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="tv5" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(17.931, 26.5754, 0.0253109, -0.176275, 1.56006, -6.99736, -8.85701, 53.7709, 0.190505, -116, 9.69902, -159.063)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="tv6" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(10.9377, 50.2149, 0.15491, 0.0650097, 1.45862, -6.99789, -16.744, 32.8075, 0.0740222, -284.448, 4.65632, -59.3483)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="tv29" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(-5.09573, 57.9918, -0.210367, -0.156924, -1.9886, -6.99594, -19.3393, -15.2642, 0.112197, -246.136, 4.81695, 128.622)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tv29"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv29/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv29/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
 
 [node name="Map1" parent="." instance=ExtResource("5_88wuu")]
 
