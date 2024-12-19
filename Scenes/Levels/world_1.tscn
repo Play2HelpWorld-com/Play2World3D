@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://2nrq4njde1av"]
+[gd_scene load_steps=18 format=3 uid="uid://2nrq4njde1av"]
 
 [ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/Player.tscn" id="1_bgyfo"]
 [ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/chat_ai.tscn" id="4_kmb2q"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://v41ej038mix2" path="res://Scenes/Maps/Map3/map_3.tscn" id="6_y4lo3"]
 [ext_resource type="PackedScene" uid="uid://chbxmyijhq0la" path="res://Scenes/Maps/Map4/map_4.tscn" id="7_1l7tq"]
 [ext_resource type="PackedScene" uid="uid://k24m1g5i30nd" path="res://Scenes/Maps/Map5/map_5.tscn" id="8_7qjn6"]
+[ext_resource type="PackedScene" uid="uid://cs0jdcwf3s2de" path="res://Scenes/scoreboard.tscn" id="10_fk7mn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x6jtg"]
 sky_top_color = Color(0.276067, 0.393872, 0.879483, 1)
@@ -167,3 +168,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -995.236, 0, 0)
 
 [node name="Map5" parent="." instance=ExtResource("8_7qjn6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1001.51, 0, 0)
+
+[node name="Scoreboard" parent="." instance=ExtResource("10_fk7mn")]
+transform = Transform3D(-0.999967, 0, -0.0080808, 0, 1, 0, 0.0080808, 0, -0.999967, 0, 0, 235.501)
