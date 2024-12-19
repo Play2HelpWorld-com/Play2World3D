@@ -1,0 +1,62 @@
+[gd_scene load_steps=14 format=3 uid="uid://cmlg2enbjc110"]
+
+[ext_resource type="Script" path="res://Scenes/Maps/Map1/map_1.gd" id="1_xo1v0"]
+[ext_resource type="PackedScene" uid="uid://b6ouxbp7sojjy" path="res://assets/spaceKit/Environments/GLTF/House_Long.gltf" id="2_gll01"]
+[ext_resource type="PackedScene" uid="uid://c6e2fvmpdfex5" path="res://assets/spaceKit/Environments/GLTF/Planet_1.gltf" id="3_m1520"]
+[ext_resource type="PackedScene" uid="uid://1bbhaoqpi20y" path="res://assets/spaceKit/Environments/GLTF/Rock_Large_1.gltf" id="4_tlul7"]
+[ext_resource type="PackedScene" uid="uid://ti23q1ocdqqe" path="res://assets/spaceKit/Environments/GLTF/Rock_Large_2.gltf" id="5_dt625"]
+[ext_resource type="PackedScene" uid="uid://c8gj5hkivmywt" path="res://assets/spaceKit/Environments/GLTF/Rock_Large_3.gltf" id="6_lhi2d"]
+[ext_resource type="PackedScene" uid="uid://dwbb0sq446iip" path="res://assets/spaceKit/Environments/GLTF/Tree_Blob_3.gltf" id="7_err5e"]
+[ext_resource type="PackedScene" uid="uid://ca5dnay4bc2jt" path="res://assets/spaceKit/Environments/GLTF/Tree_Floating_2.gltf" id="8_ept14"]
+[ext_resource type="PackedScene" uid="uid://chuom83e63thh" path="res://assets/spaceKit/Environments/GLTF/Tree_Lava_1.gltf" id="9_mih1m"]
+[ext_resource type="PackedScene" uid="uid://bnbnd281to6wb" path="res://assets/spaceKit/Environments/GLTF/Tree_Light_1.gltf" id="10_bybo6"]
+[ext_resource type="PackedScene" uid="uid://cm3q5e31dvide" path="res://assets/spaceKit/Environments/GLTF/Tree_Spikes_2.gltf" id="11_mjgpt"]
+[ext_resource type="PackedScene" uid="uid://ci5mo0ssfiakf" path="res://assets/spaceKit/Environments/GLTF/Tree_Spiral_3.gltf" id="12_g05yx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6bkv"]
+albedo_color = Color(0.167243, 0.634795, 0.305633, 1)
+uv1_triplanar = true
+
+[node name="Map1" type="Node3D"]
+script = ExtResource("1_xo1v0")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material_overlay = SubResource("StandardMaterial3D_v6bkv")
+use_collision = true
+size = Vector3(1000, 1, 1000)
+
+[node name="House_Long" parent="CSGBox3D" instance=ExtResource("2_gll01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.66175, 0.499999, -3.86463)
+
+[node name="Planet_1" parent="CSGBox3D" instance=ExtResource("3_m1520")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89074, 4.9011, 13.5005)
+
+[node name="Rock_Large_1" parent="CSGBox3D" instance=ExtResource("4_tlul7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.908, 1.62759, 155.209)
+
+[node name="Rock_Large_2" parent="CSGBox3D" instance=ExtResource("5_dt625")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.7002, 0.452461, 22.0809)
+
+[node name="Rock_Large_3" parent="CSGBox3D" instance=ExtResource("6_lhi2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1723, -0.165343, -19.4163)
+
+[node name="Rock_Large_4" parent="CSGBox3D" instance=ExtResource("6_lhi2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.7134, 0.499996, 33.9769)
+
+[node name="Tree_Blob_3" parent="CSGBox3D" instance=ExtResource("7_err5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.0579, 2.14865, 32.2924)
+
+[node name="Tree_Floating_2" parent="CSGBox3D" instance=ExtResource("8_ept14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9164, 0.499999, 16.6896)
+
+[node name="Tree_Lava_1" parent="CSGBox3D" instance=ExtResource("9_mih1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8705, 0.5, -20.8792)
+
+[node name="Tree_Light_1" parent="CSGBox3D" instance=ExtResource("10_bybo6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15976, 0.5, -1.26051)
+
+[node name="Tree_Spikes_2" parent="CSGBox3D" instance=ExtResource("11_mjgpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.8024, 0.5, 34.6709)
+
+[node name="Tree_Spiral_3" parent="CSGBox3D" instance=ExtResource("12_g05yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9046, 0.499999, 30.3821)

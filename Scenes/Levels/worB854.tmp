@@ -1,0 +1,152 @@
+[gd_scene load_steps=13 format=3 uid="uid://2nrq4njde1av"]
+
+[ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
+[ext_resource type="Script" path="res://Scripts/ui_scripts/camera_controller.gd" id="2_pf6np"]
+[ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/chat_ai.tscn" id="4_kmb2q"]
+[ext_resource type="Script" path="res://Scripts/ai/chat_ai.gd" id="5_gbv0h"]
+[ext_resource type="PackedScene" uid="uid://byru7s8nhpy3d" path="res://Scenes/Maps/Map2/map_2.tscn" id="5_ljbnq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x6jtg"]
+sky_top_color = Color(0.276067, 0.393872, 0.879483, 1)
+sky_horizon_color = Color(0.595038, 0.608377, 0.995172, 1)
+ground_bottom_color = Color(0.306779, 0.426359, 1, 1)
+ground_horizon_color = Color(0.605007, 0.623681, 0.920636, 1)
+
+[sub_resource type="Sky" id="Sky_tqpd6"]
+sky_material = SubResource("ProceduralSkyMaterial_x6jtg")
+
+[sub_resource type="Environment" id="Environment_qgd7p"]
+background_mode = 2
+sky = SubResource("Sky_tqpd6")
+ambient_light_color = Color(0.542966, 0.541672, 0.680917, 1)
+reflected_light_source = 2
+tonemap_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ftb4i"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_do3k2"]
+viewport_path = NodePath("tv4/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjxw4"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_do3k2")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_kgjak"]
+file = "res://Scenes/Levels/tv and vids/big-buck-bunny_trailer.ogv"
+
+[node name="World1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qgd7p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 6.05062, 0)
+shadow_enabled = true
+
+[node name="captain" parent="." instance=ExtResource("1_bgyfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66119, 0)
+
+[node name="cam_gimbal" type="Node3D" parent="."]
+script = ExtResource("2_pf6np")
+
+[node name="Camera3D" type="Camera3D" parent="cam_gimbal"]
+transform = Transform3D(0.999776, -0.012282, -0.0172079, 0.0154157, 0.980521, 0.19581, 0.0144677, -0.196032, 0.980491, -0.420166, 1.89745, 4.33113)
+fov = 101.78
+
+[node name="chat_ai" parent="." instance=ExtResource("4_kmb2q")]
+offset_left = 613.0
+offset_top = 7.0
+offset_right = 1142.0
+offset_bottom = 635.0
+script = ExtResource("5_gbv0h")
+
+[node name="tv2" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 8.88708, -216.534)
+mesh = SubResource("PlaneMesh_ftb4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="tv2"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="tv2/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv2/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+
+[node name="tv4" type="MeshInstance3D" parent="."]
+transform = Transform3D(12.0071, -47.9585, -0.182588, -0.176275, 1.56006, -6.99736, 15.9937, 36.0215, 0.0599546, 239.77, 9.9696, -114.292)
+mesh = SubResource("PlaneMesh_ftb4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="tv4"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="tv4/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv4/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="tv5" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.931, 26.5754, 0.0253109, -0.176275, 1.56006, -6.99736, -8.85701, 53.7709, 0.190505, -116, 9.10078, -159.063)
+mesh = SubResource("PlaneMesh_ftb4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="tv6" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.9377, 50.2149, 0.15491, 0.0650097, 1.45862, -6.99789, -16.744, 32.8075, 0.0740222, -284.448, 4.05808, -59.3483)
+mesh = SubResource("PlaneMesh_ftb4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="tv29" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.09573, 57.9918, -0.210367, -0.156924, -1.9886, -6.99594, -19.3393, -15.2642, 0.112197, -246.136, 4.21871, 128.622)
+mesh = SubResource("PlaneMesh_ftb4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="tv29"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="tv29/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv29/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="Map2" parent="." instance=ExtResource("5_ljbnq")]
