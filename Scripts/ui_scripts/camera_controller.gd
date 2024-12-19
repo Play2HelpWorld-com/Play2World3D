@@ -1,5 +1,5 @@
 extends Node3D
-@onready var player = $"../captain"
+@onready var player = $"../.."
 var base_position = Vector3()
 var base_rotation = Vector3()
 

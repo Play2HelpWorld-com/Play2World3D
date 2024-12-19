@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://5vp5pgxuneab"]
+[gd_scene load_steps=27 format=4 uid="uid://hq57qhabbjwx"]
 
 [ext_resource type="Texture2D" uid="uid://cmpljj8xip5ko" path="res://assets/pirateKit/glTF/Characters_Captain_Barbarossa_Atlas_Pirate.png" id="1_cwtey"]
 [ext_resource type="Script" path="res://Scripts/entities_scripts/player/playerScipts.gd" id="1_f52n4"]

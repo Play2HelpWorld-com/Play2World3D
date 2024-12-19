@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://2nrq4njde1av"]
+[gd_scene load_steps=12 format=3 uid="uid://2nrq4njde1av"]
 
 [ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
-[ext_resource type="Script" path="res://Scripts/ui_scripts/camera_controller.gd" id="2_pf6np"]
 [ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/chat_ai.tscn" id="4_kmb2q"]
 [ext_resource type="Script" path="res://Scripts/ai/chat_ai.gd" id="5_gbv0h"]
 [ext_resource type="PackedScene" uid="uid://byru7s8nhpy3d" path="res://Scenes/Maps/Map2/map_2.tscn" id="5_ljbnq"]
@@ -45,13 +44,6 @@ shadow_enabled = true
 
 [node name="captain" parent="." instance=ExtResource("1_bgyfo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66119, 0)
-
-[node name="cam_gimbal" type="Node3D" parent="."]
-script = ExtResource("2_pf6np")
-
-[node name="Camera3D" type="Camera3D" parent="cam_gimbal"]
-transform = Transform3D(0.999776, -0.012282, -0.0172079, 0.0154157, 0.980521, 0.19581, 0.0144677, -0.196032, 0.980491, -0.420166, 1.89745, 4.33113)
-fov = 101.78
 
 [node name="chat_ai" parent="." instance=ExtResource("4_kmb2q")]
 visible = false

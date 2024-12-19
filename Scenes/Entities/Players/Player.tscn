@@ -1,8 +1,10 @@
-[gd_scene load_steps=27 format=4 uid="uid://5vp5pgxuneab"]
+[gd_scene load_steps=28 format=4 uid="uid://btdymul33a42a"]
 
 [ext_resource type="Texture2D" uid="uid://cmpljj8xip5ko" path="res://assets/pirateKit/glTF/Characters_Captain_Barbarossa_Atlas_Pirate.png" id="1_cwtey"]
-[ext_resource type="Script" path="res://Scripts/entities_scripts/player/playerScipts.gd" id="1_f52n4"]
+[ext_resource type="Script" path="res://Scripts/entities_scripts/player/player_scripts.gd" id="1_f52n4"]
 [ext_resource type="Script" path="res://Scripts/ui_scripts/camera_controller.gd" id="3_30vq8"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_5o0mw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l754j"]
 resource_name = "Atlas"
@@ -1297,7 +1299,7 @@ tracks/38/keys = PackedFloat32Array(0, 1, 0.116623, -0.000140641, -0.0565425, 0.
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("playerCollide:position")
+tracks/39/path = NodePath("CollisionShape3D:position")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -1587,7 +1589,7 @@ tracks/38/keys = PackedFloat32Array(0, 1, 0.116623, -0.000140641, -0.0565425, 0.
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("playerCollide:position")
+tracks/39/path = NodePath("CollisionShape3D:position")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -1876,7 +1878,7 @@ tracks/38/keys = PackedFloat32Array(0, 1, 0.116623, -0.000140641, -0.0565425, 0.
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("playerCollide:position")
+tracks/39/path = NodePath("CollisionShape3D:position")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -1888,7 +1890,7 @@ tracks/39/keys = {
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("playerCollide:rotation")
+tracks/40/path = NodePath("CollisionShape3D:rotation")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/keys = {
@@ -2177,7 +2179,7 @@ tracks/38/keys = PackedFloat32Array(0, 1, 0.116623, -0.000140641, -0.0565425, 0.
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("playerCollide:position")
+tracks/39/path = NodePath("CollisionShape3D:position")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -2746,7 +2748,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("playerCollide:position")
+tracks/0/path = NodePath("CollisionShape3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -3036,7 +3038,7 @@ tracks/38/keys = PackedFloat32Array(0, 1, 0.116623, -0.000140641, -0.0565425, 0.
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("playerCollide:position")
+tracks/39/path = NodePath("CollisionShape3D:position")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -3603,7 +3605,7 @@ tracks/38/keys = PackedFloat32Array(0, 1, 0.116623, -0.000140641, -0.0565425, 0.
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("playerCollide:position")
+tracks/39/path = NodePath("CollisionShape3D:position")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -3615,7 +3617,7 @@ tracks/39/keys = {
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("playerCollide:position")
+tracks/40/path = NodePath("CollisionShape3D:position")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/keys = {
@@ -4202,10 +4204,22 @@ _data = {
 radius = 0.221431
 height = 1.64867
 
-[node name="captain" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.477409, 0)
 script = ExtResource("1_f52n4")
 
 [node name="CharacterArmature" type="Node3D" parent="."]
+
+[node name="CameraSpringArm" type="SpringArm3D" parent="CharacterArmature"]
+transform = Transform3D(0.999716, -0.00263189, 0.0236933, -0.00031233, 0.992356, 0.123411, -0.023837, -0.123383, 0.992073, -0.778888, 1.93906, 5.63496)
+shape = SubResource("SeparationRayShape3D_5o0mw")
+spring_length = 3.0
+margin = 0.2
+
+[node name="Camera3D" type="Camera3D" parent="CharacterArmature/CameraSpringArm"]
+transform = Transform3D(1, 0, 0, 0, 0.951991, 0.306127, 0, -0.306127, 0.951991, 0.731563, 1.74584, 2.37967)
+current = true
+script = ExtResource("3_30vq8")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="CharacterArmature"]
 bones/0/name = "Root"
@@ -4472,17 +4486,10 @@ libraries = {
 }
 
 [node name="PlayerName" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12074, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.84525, 0)
 billboard = 2
 text = "Player Name"
 
-[node name="playerCollide" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.99994, 0.010943, 0, -0.010943, 0.99994, 0.0169685, 0.701576, -0.109254)
 shape = SubResource("CapsuleShape3D_1le6j")
-
-[node name="cam_gimbal" type="Node3D" parent="."]
-script = ExtResource("3_30vq8")
-
-[node name="Camera3D" type="Camera3D" parent="cam_gimbal"]
-transform = Transform3D(0.999776, -0.012282, -0.0172079, 0.0154157, 0.980521, 0.19581, 0.0144677, -0.196032, 0.980491, -0.420166, 1.89745, 4.33113)
-fov = 101.78
