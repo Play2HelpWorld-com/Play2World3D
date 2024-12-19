@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bur2b37aia6li"
+uid="uid://c7sugrd65ruwd"
 path.s3tc="res://.godot/imported/Enemy_Tentacle_Atlas_Pirate.png-7bfbce0f3932855892a1cf13b1cc56c9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

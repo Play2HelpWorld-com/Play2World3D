@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6awj8jqvx3pm"
+uid="uid://bs60sqpw02qva"
 path.s3tc="res://.godot/imported/UI_Gem_Blue_Atlas_Pirate.png-22dc727b1a51954752bf96b543552c5c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

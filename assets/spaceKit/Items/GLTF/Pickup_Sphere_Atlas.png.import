@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c215mejy246i0"
+uid="uid://bakrbyk8dpqwc"
 path.s3tc="res://.godot/imported/Pickup_Sphere_Atlas.png-dfbf7415a4e14c7e50225f892e11061a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

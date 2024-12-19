@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://2nrq4njde1av"]
+[gd_scene load_steps=18 format=3 uid="uid://2nrq4njde1av"]
 
 [ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
 [ext_resource type="Script" path="res://Scripts/ui_scripts/camera_controller.gd" id="2_pf6np"]
 [ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/chat_ai.tscn" id="4_kmb2q"]
 [ext_resource type="Script" path="res://Scripts/ai/chat_ai.gd" id="5_gbv0h"]
+[ext_resource type="Texture2D" uid="uid://mqh1rdm4lcwa" path="res://assets/images/play2helplogo.jpg" id="5_iaksw"]
+[ext_resource type="Texture2D" uid="uid://oljoh3hw7vgh" path="res://assets/images/Untitled design (1).png" id="6_yli6t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x6jtg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -19,20 +21,26 @@ tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ftb4i"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_do3k2"]
-viewport_path = NodePath("tv4/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_t45fh"]
+viewport_path = NodePath("tv7/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjxw4"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_do3k2")
+albedo_texture = SubResource("ViewportTexture_t45fh")
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_kgjak"]
 file = "res://Scenes/Levels/tv and vids/big-buck-bunny_trailer.ogv"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fyhx5"]
+albedo_texture = ExtResource("5_iaksw")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jvcnp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogx3q"]
 albedo_color = Color(5.77569e-07, 0.50039, 0.034299, 1)
+
+[sub_resource type="Environment" id="Environment_s4n68"]
+background_mode = 2
 
 [node name="World1" type="Node3D"]
 
@@ -59,25 +67,26 @@ offset_right = 1142.0
 offset_bottom = 635.0
 script = ExtResource("5_gbv0h")
 
-[node name="tv2" type="MeshInstance3D" parent="."]
-transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 8.88708, -216.534)
+[node name="tv7" type="MeshInstance3D" parent="."]
+transform = Transform3D(446.687, 11.9487, 0.404913, -1.07384, 0.107169, -221.361, -343.936, 15.518, 1.21698, -646.948, 219.008, -1035.78)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
-[node name="SubViewport" type="SubViewport" parent="tv2"]
+[node name="SubViewport" type="SubViewport" parent="tv7"]
 size = Vector2i(640, 360)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv2/SubViewport"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="tv7/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv2/SubViewport/SubViewportContainer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv7/SubViewport/SubViewportContainer"]
 layout_mode = 2
 stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
+loop = true
 
 [node name="tv4" type="MeshInstance3D" parent="."]
-transform = Transform3D(12.0071, -47.9585, -0.182588, -0.176275, 1.56006, -6.99736, 15.9937, 36.0215, 0.0599546, 239.77, 9.9696, -114.292)
+transform = Transform3D(-349.494, 10.9355, 1.34846, -0.892458, 0.0898451, -266.218, -312.054, -12.2478, -0.748919, -808.707, 208.679, 759.443)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -94,26 +103,8 @@ stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 loop = true
 
-[node name="tv5" type="MeshInstance3D" parent="."]
-transform = Transform3D(17.931, 26.5754, 0.0253109, -0.176275, 1.56006, -6.99736, -8.85701, 53.7709, 0.190505, -116, 9.10078, -159.063)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv5"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv5/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv5/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-loop = true
-
 [node name="tv6" type="MeshInstance3D" parent="."]
-transform = Transform3D(10.9377, 50.2149, 0.15491, 0.0650097, 1.45862, -6.99789, -16.744, 32.8075, 0.0740222, -284.448, 4.05808, -59.3483)
+transform = Transform3D(-283.623, -10.2045, -1.68022, 2.67592, 0.0631435, -222.818, 335.603, -8.62445, 0.356676, 882.529, 207.977, 643.371)
 mesh = SubResource("PlaneMesh_ftb4i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
@@ -130,25 +121,25 @@ stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 loop = true
 
-[node name="tv29" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.09573, 57.9918, -0.210367, -0.156924, -1.9886, -6.99594, -19.3393, -15.2642, 0.112197, -246.136, 4.21871, 128.622)
-mesh = SubResource("PlaneMesh_ftb4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="tv29"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="tv29/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="tv29/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-loop = true
-
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-transform = Transform3D(1131, 0, 0, 0, 1131, 0, 0, 0, 1131, 4.36205, -5.28638, -3.69482)
+transform = Transform3D(1131, 0, 0, 0, 1131, 0, 0, 0, 1131, 4.36672, -4.61103, -3.69427)
+material_override = SubResource("StandardMaterial3D_fyhx5")
 mesh = SubResource("PlaneMesh_jvcnp")
 material = SubResource("StandardMaterial3D_ogx3q")
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s4n68")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.905136, 0, 0, 0, 1, 0, 31.7679, 552.454)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D"]
+transform = Transform3D(155.164, 0, 0, 0, 77.9459, 0, 0, 0, -0.759755, 86.3433, 197.428, 434.328)
+texture = ExtResource("5_iaksw")
+
+[node name="Node3D3" type="Node3D" parent="."]
+transform = Transform3D(0.0233104, 0.00143616, 0.70835, 0.00239247, 0.294093, -0.00379126, 0.352882, -0.00208876, -0.0467659, -1389.3, 157.787, -153.078)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D3"]
+transform = Transform3D(155.164, 0, 0, 0, 77.9459, 0, 0, 0, -0.759755, 86.3433, 197.428, 434.328)
+texture = ExtResource("6_yli6t")
