@@ -12,4 +12,4 @@ script = ExtResource("1_rxlk8")
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 material_overlay = SubResource("StandardMaterial3D_v6bkv")
 use_collision = true
-size = Vector3(1000, 1, 1000)
+size = Vector3(1000, 5, 1000)

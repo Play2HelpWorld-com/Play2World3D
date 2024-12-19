@@ -58,7 +58,7 @@ offset_bottom = -5.0
 script = ExtResource("5_gbv0h")
 
 [node name="Map0" parent="." instance=ExtResource("4_wmnsd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.598244, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.753883, 0)
 
 [node name="tv2" type="MeshInstance3D" parent="Map0"]
 transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 9.48532, -216.534)
