@@ -4470,6 +4470,11 @@ libraries = {
 "": SubResource("AnimationLibrary_j1m8v")
 }
 
+[node name="PlayerName" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12074, 0)
+billboard = 2
+text = "Player Name"
+
 [node name="playerCollide" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.99994, 0.010943, 0, -0.010943, 0.99994, 0.0169685, 0.701576, -0.109254)
 shape = SubResource("CapsuleShape3D_1le6j")
