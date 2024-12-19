@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://2nrq4njde1av"]
 
-[ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/captain.tscn" id="1_bgyfo"]
+[ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/Player.tscn" id="1_bgyfo"]
 [ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/chat_ai.tscn" id="4_kmb2q"]
 [ext_resource type="Script" path="res://Scripts/ai/chat_ai.gd" id="5_gbv0h"]
 [ext_resource type="PackedScene" uid="uid://byru7s8nhpy3d" path="res://Scenes/Maps/Map2/map_2.tscn" id="5_ljbnq"]
@@ -42,11 +42,10 @@ environment = SubResource("Environment_qgd7p")
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 6.05062, 0)
 shadow_enabled = true
 
-[node name="captain" parent="." instance=ExtResource("1_bgyfo")]
+[node name="Player" parent="." instance=ExtResource("1_bgyfo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66119, 0)
 
 [node name="chat_ai" parent="." instance=ExtResource("4_kmb2q")]
-visible = false
 offset_left = 613.0
 offset_top = 7.0
 offset_right = 1142.0

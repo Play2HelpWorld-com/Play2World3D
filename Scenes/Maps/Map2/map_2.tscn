@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Maps/Map2/map_2.gd" id="1_kuwg4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6bkv"]
-albedo_color = Color(0.122536, 0.63468, 0.358067, 1)
+albedo_color = Color(0.167243, 0.634795, 0.305633, 1)
 uv1_triplanar = true
 
 [node name="Map2" type="Node3D"]
