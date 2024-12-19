@@ -1,0 +1,93 @@
+gd
+extends Node
+
+var screen_width = 800
+var screen_height = 600
+var fps = 60
+
+var in_game_currency = 0
+var ads_enabled = true
+var ad_displayed = false
+
+var ad_config = {
+"ad_image": "res://images/advert/luxbag.png",
+"ad_headline": "Luxury Bags Sale!",
+"ad_description": "Get up to 50% off on our latest collection of luxury bags.",
+"ad_call_to_action": "Shop Now",
+"ad_url": "(link unavailable)"
+}
+
+func log_event(event):
+print("Logging event: ", event)
+
+func display_ads():
+if ads_enabled and not ad_displayed:
+print("Displaying ad...")
+log_event("Ad displayed")
+ad_displayed = true
+
+
+Create ad image
+	var ad_image = TextureRect.new()
+	ad_image.texture = load(ad_config["ad_image"])
+	ad_image.set_anchors_and_margins_preset(Control.PRESET_WIDE)
+	add_child(ad_image)
+
+	# Create ad headline
+	var ad_headline = Label.new()
+	ad_headline.text = ad_config["ad_headline"]
+	ad_headline.set_anchors_and_margins_preset(Control.PRESET_WIDE)
+	add_child(ad_headline)
+
+	# Create ad description
+	var ad_description = Label.new()
+	ad_description.text = ad_config["ad_description"]
+	ad_description.set_anchors_and_margins_preset(Control.PRESET_WIDE)
+	add_child(ad_description)
+
+	# Create ad call-to-action
+	var ad_call_to_action = Button.new()
+	ad_call_to_action.text = ad_config["ad_call_to_action"]
+	ad_call_to_action.connect("pressed", self, "_on_ad_call_to_action_pressed")
+	ad_call_to_action.set_anchors_and_margins_preset(Control.PRESET_WIDE)
+	add_child(ad_call_to_action)
+
+func manage_ad_preferences():
+ads_enabled = not ads_enabled
+print("Ads enabled: ", ads_enabled)
+if not ads_enabled:
+ad_displayed = false
+
+func earn_currency(amount):
+in_game_currency += amount
+print("Earning currency: ", amount, ". Total: ", in_game_currency)
+
+func draw_ui():
+Draw the user interface here
+pass
+
+func _on_ad_call_to_action_pressed():
+OS.shell_open(ad_config["ad_url"])
+
+func game_loop():
+Clear the screen
+get_tree().get_root().add_color_override("default_color", Color(0, 0, 0))
+
+
+Randomly display ads
+if rand_range(0, 1) < 0.1 and ads_enabled:
+	display_ads()
+
+Simulate earning currency
+if rand_range(0, 1) < 0.05:
+	earn_currency(randi() % 100 + 1)
+
+Draw the user interface
+draw_ui()
+
+Request next frame
+yield(get_tree().create_timer(1.0 / fps), "timeout")
+game_loop()
+
+func _ready():
+game_loop()
