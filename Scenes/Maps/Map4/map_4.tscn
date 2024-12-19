@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://chbxmyijhq0la"]
+
+[ext_resource type="Script" path="res://Scenes/Maps/Map4/map_4.gd" id="1_remdk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6bkv"]
+albedo_color = Color(0.820916, 0.386922, 0.286053, 1)
+uv1_triplanar = true
+
+[node name="Map1" type="Node3D"]
+script = ExtResource("1_remdk")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material_overlay = SubResource("StandardMaterial3D_v6bkv")
+use_collision = true
+size = Vector3(1000, 1, 1000)
