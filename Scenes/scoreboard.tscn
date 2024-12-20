@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cs0jdcwf3s2de"]
+
+[node name="Scoreboard" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 80.2871, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.2478, 0)
+size = Vector3(200, 100, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.8286, -56.0106, 0)
+size = Vector3(10, 50, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1779, -56.0106, 0)
+size = Vector3(10, 50, 1)
+
+[node name="Title" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 0, 59.807, 0.6)
+text = "Scoreboard"
+
+[node name="Player1" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, -67.0957, 50.4085, 0.6)
+text = "Player 1"
+
+[node name="Player2" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, -67.0957, 34.7377, 0.6)
+text = "Player 2"
+
+[node name="Player3" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, -67.0957, 19.7958, 0.6)
+text = "Player 3"
+
+[node name="Player4" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, -67.0957, 5.76942, 0.6)
+text = "Player 4"
+
+[node name="Player5" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, -67.0957, -9.1292, 0.6)
+text = "Player 5"
+
+[node name="Player6" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, -67.0957, -23.1263, 0.6)
+text = "Player 6"
+
+[node name="Score1" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 66.3303, 50.4085, 0.6)
+text = "Score 1"
+
+[node name="Score2" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 66.3303, 34.7377, 0.6)
+text = "Score 2"
+
+[node name="Score3" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 66.3303, 19.7958, 0.6)
+text = "Score 3"
+
+[node name="Score4" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 66.3303, 5.76942, 0.6)
+text = "Score 4"
+
+[node name="Score5" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 66.3303, -9.1292, 0.6)
+text = "Score 5"
+
+[node name="Score6" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(80, 0, 0, 0, 40, 0, 0, 0, 40, 66.3303, -23.1263, 0.6)
+text = "Score 6"
