@@ -1,15 +1,28 @@
-[gd_scene load_steps=18 format=3 uid="uid://2nrq4njde1av"]
+[gd_scene load_steps=36 format=3 uid="uid://2nrq4njde1av"]
 
 [ext_resource type="PackedScene" uid="uid://5vp5pgxuneab" path="res://Scenes/Entities/Players/Player.tscn" id="1_bgyfo"]
 [ext_resource type="PackedScene" uid="uid://ljv2pphpa4w1" path="res://Scenes/Ai/chat_ai.tscn" id="4_kmb2q"]
 [ext_resource type="PackedScene" uid="uid://bsk213cue7oho" path="res://Scenes/Maps/Map0/map_0.tscn" id="4_wmnsd"]
-[ext_resource type="PackedScene" uid="uid://cmlg2enbjc110" path="res://Scenes/Maps/Map1/map_1.tscn" id="5_88wuu"]
 [ext_resource type="Script" path="res://Scripts/ai/chat_ai.gd" id="5_gbv0h"]
-[ext_resource type="PackedScene" uid="uid://byru7s8nhpy3d" path="res://Scenes/Maps/Map2/map_2.tscn" id="5_ljbnq"]
-[ext_resource type="PackedScene" uid="uid://v41ej038mix2" path="res://Scenes/Maps/Map3/map_3.tscn" id="6_y4lo3"]
-[ext_resource type="PackedScene" uid="uid://chbxmyijhq0la" path="res://Scenes/Maps/Map4/map_4.tscn" id="7_1l7tq"]
-[ext_resource type="PackedScene" uid="uid://k24m1g5i30nd" path="res://Scenes/Maps/Map5/map_5.tscn" id="8_7qjn6"]
+[ext_resource type="Texture2D" uid="uid://biep0m37yu0s5" path="res://assets/images/Play2WorkWorld_Logo_3_rgb.png" id="5_xk5i3"]
+[ext_resource type="Script" path="res://Scenes/Maps/Map1/map_1.gd" id="6_j4e2p"]
+[ext_resource type="PackedScene" uid="uid://b6ouxbp7sojjy" path="res://assets/spaceKit/Environments/GLTF/House_Long.gltf" id="7_a71bs"]
+[ext_resource type="PackedScene" uid="uid://c6e2fvmpdfex5" path="res://assets/spaceKit/Environments/GLTF/Planet_1.gltf" id="8_ih328"]
+[ext_resource type="PackedScene" uid="uid://1bbhaoqpi20y" path="res://assets/spaceKit/Environments/GLTF/Rock_Large_1.gltf" id="9_ds1av"]
+[ext_resource type="PackedScene" uid="uid://ti23q1ocdqqe" path="res://assets/spaceKit/Environments/GLTF/Rock_Large_2.gltf" id="10_c2h4w"]
 [ext_resource type="PackedScene" uid="uid://cs0jdcwf3s2de" path="res://Scenes/scoreboard.tscn" id="10_fk7mn"]
+[ext_resource type="PackedScene" uid="uid://c8gj5hkivmywt" path="res://assets/spaceKit/Environments/GLTF/Rock_Large_3.gltf" id="11_vxwhe"]
+[ext_resource type="PackedScene" uid="uid://dwbb0sq446iip" path="res://assets/spaceKit/Environments/GLTF/Tree_Blob_3.gltf" id="12_hu4ok"]
+[ext_resource type="PackedScene" uid="uid://ca5dnay4bc2jt" path="res://assets/spaceKit/Environments/GLTF/Tree_Floating_2.gltf" id="13_7n71j"]
+[ext_resource type="PackedScene" uid="uid://chuom83e63thh" path="res://assets/spaceKit/Environments/GLTF/Tree_Lava_1.gltf" id="14_76ujq"]
+[ext_resource type="PackedScene" uid="uid://bnbnd281to6wb" path="res://assets/spaceKit/Environments/GLTF/Tree_Light_1.gltf" id="15_gplro"]
+[ext_resource type="PackedScene" uid="uid://cm3q5e31dvide" path="res://assets/spaceKit/Environments/GLTF/Tree_Spikes_2.gltf" id="16_4dx8u"]
+[ext_resource type="PackedScene" uid="uid://ci5mo0ssfiakf" path="res://assets/spaceKit/Environments/GLTF/Tree_Spiral_3.gltf" id="17_xl72b"]
+[ext_resource type="Script" path="res://Scenes/Maps/Map2/map_2.gd" id="18_6r04p"]
+[ext_resource type="Texture2D" uid="uid://vds3pjtecra" path="res://assets/images/play2helplogo.jpg" id="19_57c7m"]
+[ext_resource type="Script" path="res://Scenes/Maps/Map3/map_3.gd" id="21_rq77h"]
+[ext_resource type="Script" path="res://Scenes/Maps/Map4/map_4.gd" id="22_34l85"]
+[ext_resource type="Script" path="res://Scenes/Maps/Map5/map_5.gd" id="23_tyiqe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x6jtg"]
 sky_top_color = Color(0.276067, 0.393872, 0.879483, 1)
@@ -30,7 +43,7 @@ tonemap_mode = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_ftb4i"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_do3k2"]
-viewport_path = NodePath("Map0/tv4/SubViewport")
+viewport_path = NodePath("Map0/tvs/tv4/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjxw4"]
 resource_local_to_scene = true
@@ -38,6 +51,26 @@ albedo_texture = SubResource("ViewportTexture_do3k2")
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_kgjak"]
 file = "res://Scenes/Levels/tv and vids/big-buck-bunny_trailer.ogv"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6bkv"]
+albedo_color = Color(0.167243, 0.634795, 0.305633, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dha5q"]
+albedo_color = Color(2.02149e-06, 0.587478, 0.762559, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7v3km"]
+albedo_color = Color(0.599366, 0.368186, 1, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7ts8"]
+albedo_color = Color(0.820916, 0.386922, 0.286053, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nr2p"]
+albedo_color = Color(0.501179, 0.574429, 0.232242, 1)
+uv1_triplanar = true
 
 [node name="World1" type="Node3D"]
 
@@ -61,113 +94,1382 @@ script = ExtResource("5_gbv0h")
 [node name="Map0" parent="." instance=ExtResource("4_wmnsd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.753883, 0)
 
-[node name="tv2" type="MeshInstance3D" parent="Map0"]
-transform = Transform3D(17.9189, -26.5277, 0.340111, 0.952194, 0.0257793, -7.99093, 8.83219, 53.8171, 0.171477, 90.1275, 9.48532, -216.534)
+[node name="tv7" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(-47.7628, -0.182054, 0.136736, -0.421071, 0.232673, -16.4964, 0.961303, -8.94372, -0.431939, 131.364, 24.8843, 234.395)
 mesh = SubResource("PlaneMesh_ftb4i")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
-[node name="SubViewport" type="SubViewport" parent="Map0/tv2"]
+[node name="SubViewport" type="SubViewport" parent="Map0/tv7"]
 size = Vector2i(640, 360)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv2/SubViewport"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv7/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv2/SubViewport/SubViewportContainer"]
-layout_mode = 2
-stream = SubResource("VideoStreamTheora_kgjak")
-autoplay = true
-
-[node name="tv4" type="MeshInstance3D" parent="Map0"]
-transform = Transform3D(12.0071, -47.9585, -0.182588, -0.176275, 1.56006, -6.99736, 15.9937, 36.0215, 0.0599546, 239.77, 10.5678, -114.292)
-mesh = SubResource("PlaneMesh_ftb4i")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
-
-[node name="SubViewport" type="SubViewport" parent="Map0/tv4"]
-size = Vector2i(640, 360)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv4/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv4/SubViewport/SubViewportContainer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv7/SubViewport/SubViewportContainer"]
 layout_mode = 2
 stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 loop = true
 
-[node name="tv5" type="MeshInstance3D" parent="Map0"]
-transform = Transform3D(17.931, 26.5754, 0.0253109, -0.176275, 1.56006, -6.99736, -8.85701, 53.7709, 0.190505, -116, 9.69902, -159.063)
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tv7"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tv7"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tv7"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv11" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(-47.7628, -0.182054, 0.136736, -0.421071, 0.232673, -16.4964, 0.961303, -8.94372, -0.431939, 131.364, 24.8843, 234.395)
 mesh = SubResource("PlaneMesh_ftb4i")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
-[node name="SubViewport" type="SubViewport" parent="Map0/tv5"]
+[node name="SubViewport" type="SubViewport" parent="Map0/tv11"]
 size = Vector2i(640, 360)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv5/SubViewport"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv11/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv5/SubViewport/SubViewportContainer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv11/SubViewport/SubViewportContainer"]
 layout_mode = 2
 stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 loop = true
 
-[node name="tv6" type="MeshInstance3D" parent="Map0"]
-transform = Transform3D(10.9377, 50.2149, 0.15491, 0.0650097, 1.45862, -6.99789, -16.744, 32.8075, 0.0740222, -284.448, 4.65632, -59.3483)
+[node name="Node3D" type="Node3D" parent="Map0/tv11/SubViewport"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tv11"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tv11"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tv11"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv12" type="MeshInstance3D" parent="Map0"]
+transform = Transform3D(-47.7628, -0.182054, 0.136736, -0.421071, 0.232673, -16.4964, 0.961303, -8.94372, -0.431939, -122.234, 24.8843, 234.395)
 mesh = SubResource("PlaneMesh_ftb4i")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
-[node name="SubViewport" type="SubViewport" parent="Map0/tv6"]
+[node name="SubViewport" type="SubViewport" parent="Map0/tv12"]
 size = Vector2i(640, 360)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv6/SubViewport"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv12/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv6/SubViewport/SubViewportContainer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv12/SubViewport/SubViewportContainer"]
 layout_mode = 2
 stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 loop = true
 
-[node name="tv29" type="MeshInstance3D" parent="Map0"]
-transform = Transform3D(-5.09573, 57.9918, -0.210367, -0.156924, -1.9886, -6.99594, -19.3393, -15.2642, 0.112197, -246.136, 4.81695, 128.622)
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tv12"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tv12"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tv12"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="Area3D" type="Area3D" parent="Map0"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/Area3D"]
+transform = Transform3D(1.59968, -0.00661835, 1.54753, 0, 1.58773, 0.00679027, -1.07514, -0.00984729, 2.30253, -16.725, 10.2663, 5.99324)
+size = Vector3(3.5798, 2.2973, 2.39075)
+
+[node name="logo" type="CSGBox3D" parent="Map0/Area3D"]
+transform = Transform3D(1.60917, 0, 1.55668, 0, 1.59712, 0, -1.08152, 0, 2.31615, -16.4587, 5.50847, 5.5399)
+size = Vector3(1.16197, 3.75703, 1.16735)
+
+[node name="Sprite3D" type="Sprite3D" parent="Map0/Area3D"]
+transform = Transform3D(0.284862, -0.000202741, 1.47292, 0, 0.192223, 0.00163525, -0.191455, -0.000301653, 2.19152, -14.871, 10.2206, 8.76814)
+texture = ExtResource("5_xk5i3")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Map0/Area3D"]
+transform = Transform3D(0.282711, -0.000724653, 2.61824, 0, 0.183611, 0.0108772, -0.19001, -0.00107819, 3.89562, -18.5946, 10.2655, 3.22783)
+flip_h = true
+texture = ExtResource("5_xk5i3")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Map0/Area3D"]
+transform = Transform3D(0.180155, 0.000609145, -1.83158, -5.79977e-05, 0.189471, 0.00524937, 0.268025, -0.000284305, 1.23123, -13.8243, 10.2747, 4.10018)
+flip_h = true
+texture = ExtResource("5_xk5i3")
+
+[node name="Node3D" type="Node3D" parent="Map0/Area3D"]
+transform = Transform3D(1.60917, 0, 1.55668, 0, 1.59712, 0, -1.08152, 0, 2.31615, -16.5045, 4.60782, 5.47163)
+
+[node name="Sprite3D4" type="Sprite3D" parent="Map0/Area3D"]
+transform = Transform3D(0.187382, 0.000607335, -5.91867, -5.94909e-05, 0.190951, 0.0171917, 0.273146, -0.000297965, 4.14974, -19.6244, 10.2747, 7.98316)
+texture = ExtResource("5_xk5i3")
+
+[node name="Area3D2" type="Area3D" parent="Map0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 875.544, -2.17825, -5.73247)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/Area3D2"]
+transform = Transform3D(1.59968, -0.00661835, 1.54753, 0, 1.58773, 0.00679027, -1.07514, -0.00984729, 2.30253, -16.725, 10.2663, 5.99324)
+size = Vector3(3.5798, 2.2973, 2.39075)
+
+[node name="logo" type="CSGBox3D" parent="Map0/Area3D2"]
+transform = Transform3D(1.60917, 0, 1.55668, 0, 1.59712, 0, -1.08152, 0, 2.31615, -16.4587, 5.50847, 5.5399)
+size = Vector3(1.16197, 3.75703, 1.16735)
+
+[node name="Sprite3D" type="Sprite3D" parent="Map0/Area3D2"]
+transform = Transform3D(0.284862, -0.000202741, 1.47292, 0, 0.192223, 0.00163525, -0.191455, -0.000301653, 2.19152, -14.871, 10.2206, 8.76814)
+texture = ExtResource("5_xk5i3")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Map0/Area3D2"]
+transform = Transform3D(0.282711, -0.000724653, 2.61824, 0, 0.183611, 0.0108772, -0.19001, -0.00107819, 3.89562, -18.5946, 10.2655, 3.22783)
+flip_h = true
+texture = ExtResource("5_xk5i3")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Map0/Area3D2"]
+transform = Transform3D(0.180155, 0.000609145, -1.83158, -5.79977e-05, 0.189471, 0.00524937, 0.268025, -0.000284305, 1.23123, -13.8243, 10.2747, 4.10018)
+flip_h = true
+texture = ExtResource("5_xk5i3")
+
+[node name="Node3D" type="Node3D" parent="Map0/Area3D2"]
+transform = Transform3D(1.60917, 0, 1.55668, 0, 1.59712, 0, -1.08152, 0, 2.31615, -16.5045, 4.60782, 5.47163)
+
+[node name="Sprite3D4" type="Sprite3D" parent="Map0/Area3D2"]
+transform = Transform3D(0.187382, 0.000607335, -5.91867, -5.94909e-05, 0.190951, 0.0171917, 0.273146, -0.000297965, 4.14974, -19.6244, 10.2747, 7.98316)
+texture = ExtResource("5_xk5i3")
+
+[node name="tvs" type="Node3D" parent="Map0"]
+
+[node name="tv4" type="MeshInstance3D" parent="Map0/tvs"]
+transform = Transform3D(7.57391, -1.38687, -0.100715, -0.0956025, 0.0504038, -4.06525, 7.76425, 1.35349, 0.0481899, 14.9262, 9.0764, -23.3904)
 mesh = SubResource("PlaneMesh_ftb4i")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
 
-[node name="SubViewport" type="SubViewport" parent="Map0/tv29"]
+[node name="SubViewport" type="SubViewport" parent="Map0/tvs/tv4"]
 size = Vector2i(640, 360)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tv29/SubViewport"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tvs/tv4/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tv29/SubViewport/SubViewportContainer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tvs/tv4/SubViewport/SubViewportContainer"]
 layout_mode = 2
 stream = SubResource("VideoStreamTheora_kgjak")
 autoplay = true
 loop = true
 
-[node name="Map1" parent="." instance=ExtResource("5_88wuu")]
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tvs/tv4"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
 
-[node name="Map2" parent="." instance=ExtResource("5_ljbnq")]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tvs/tv4"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tvs/tv4"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv10" type="MeshInstance3D" parent="Map0/tvs"]
+transform = Transform3D(3.73837, -1.81898, -0.111615, -0.0956025, 0.0504038, -4.06525, 10.182, 0.668326, 0.00280986, 27.52, 9.0764, -3.38992)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tvs/tv10"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tvs/tv10/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tvs/tv10/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tvs/tv10"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tvs/tv10"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tvs/tv10"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv5" type="MeshInstance3D" parent="Map0/tvs"]
+transform = Transform3D(10.4886, -0.493282, -0.0615896, -0.0956025, 0.0504038, -4.06525, 2.76338, 1.87404, 0.0931262, -5.07742, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tvs/tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tvs/tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tvs/tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tvs/tv5"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tvs/tv5"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tvs/tv5"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv6" type="MeshInstance3D" parent="Map0/tvs"]
+transform = Transform3D(10.5386, 0.458904, -0.00979678, -0.0956025, 0.0504038, -4.06525, -2.56612, 1.88275, 0.11122, -28.493, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tvs/tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tvs/tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tvs/tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tvs/tv6"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tvs/tv6"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tvs/tv6"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv9" type="MeshInstance3D" parent="Map0/tvs"]
+transform = Transform3D(9.16585, 1.03654, 0.0262614, -0.0956025, 0.0504038, -4.06525, -5.79957, 1.63736, 0.108518, -50.4647, 9.38848, -25.5027)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map0/tvs/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map0/tvs/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map0/tvs/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map0/tvs/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map0/tvs/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map0/tvs/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="Map1" type="Node3D" parent="."]
+script = ExtResource("6_j4e2p")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map1"]
+material_overlay = SubResource("StandardMaterial3D_v6bkv")
+use_collision = true
+size = Vector3(1000, 5, 1000)
+
+[node name="House_Long" parent="Map1/CSGBox3D" instance=ExtResource("7_a71bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.66175, 0.499999, -3.86463)
+
+[node name="Planet_1" parent="Map1/CSGBox3D" instance=ExtResource("8_ih328")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89074, 4.9011, 13.5005)
+
+[node name="Rock_Large_1" parent="Map1/CSGBox3D" instance=ExtResource("9_ds1av")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.908, 1.62759, 155.209)
+
+[node name="Rock_Large_2" parent="Map1/CSGBox3D" instance=ExtResource("10_c2h4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.7002, 0.452461, 22.0809)
+
+[node name="Rock_Large_3" parent="Map1/CSGBox3D" instance=ExtResource("11_vxwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2909, 0.974124, 8.98722)
+
+[node name="Rock_Large_4" parent="Map1/CSGBox3D" instance=ExtResource("11_vxwhe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.7134, 0.499996, 33.9769)
+
+[node name="Tree_Blob_3" parent="Map1/CSGBox3D" instance=ExtResource("12_hu4ok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.0579, 2.14865, 32.2924)
+
+[node name="Tree_Floating_2" parent="Map1/CSGBox3D" instance=ExtResource("13_7n71j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9164, 0.499999, 16.6896)
+
+[node name="Tree_Lava_1" parent="Map1/CSGBox3D" instance=ExtResource("14_76ujq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8705, 0.5, -20.8792)
+
+[node name="Tree_Light_1" parent="Map1/CSGBox3D" instance=ExtResource("15_gplro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15976, 0.5, -1.26051)
+
+[node name="Tree_Spikes_2" parent="Map1/CSGBox3D" instance=ExtResource("16_4dx8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.8024, 0.5, 34.6709)
+
+[node name="Tree_Spiral_3" parent="Map1/CSGBox3D" instance=ExtResource("17_xl72b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9046, 0.499999, 30.3821)
+
+[node name="Map2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -997.799)
+script = ExtResource("18_6r04p")
 
-[node name="Map3" parent="." instance=ExtResource("6_y4lo3")]
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2"]
+material_overlay = SubResource("StandardMaterial3D_dha5q")
+use_collision = true
+size = Vector3(1000, 5, 1000)
+
+[node name="logo" type="Node3D" parent="Map2"]
+transform = Transform3D(4.30208, 0, 0, 0, 0.856844, 0, 0, 0, 2.89716, 70.9325, 1.75541, 25.2527)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/logo"]
+transform = Transform3D(0.999999, 0, 0, 0, 1.07053, 0, 0, 0, 1, 0.186476, 2.21944, 0.541626)
+size = Vector3(0.179321, 1.92773, 0.14859)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/logo"]
+transform = Transform3D(1.17253, 0, 0, 0, 1, 0, 0, 0, 1, 0.190659, 4.3253, 0.407349)
+size = Vector3(1, 2.26843, 1.2832)
+
+[node name="Sprite3D" type="Sprite3D" parent="Map2/logo"]
+transform = Transform3D(0.184692, 0, 0, 0, 0.360636, 0, 0, 0, 1.28292, 0.173469, 4.29192, 1.07068)
+texture = ExtResource("19_57c7m")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Map2/logo"]
+transform = Transform3D(0.175489, 0, 0, 0, 0.355777, 0, 0, 0, 2.37463, 0.206562, 4.35174, -0.256012)
+texture = ExtResource("19_57c7m")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Map2/logo"]
+transform = Transform3D(-0.0025836, 0, -0.411275, 0, 0.360651, 0, 0.201119, 0, -0.00528341, -0.403725, 4.33366, 0.399536)
+texture = ExtResource("19_57c7m")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Map2/logo"]
+transform = Transform3D(-0.000217524, 0, -0.411168, 0, 0.347371, 0, 0.19786, 0, -0.000452143, 0.787832, 4.31621, 0.424438)
+texture = ExtResource("19_57c7m")
+
+[node name="logo2" type="Node3D" parent="Map2"]
+transform = Transform3D(4.30208, 0, 0, 0, 0.856844, 0, 0, 0, 2.89716, -1182.5, 8.56406, 958.525)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/logo2"]
+transform = Transform3D(0.999999, 0, 0, 0, 1.07053, 0, 0, 0, 1, 0.186476, 2.21944, 0.541626)
+size = Vector3(0.179321, 1.92773, 0.14859)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/logo2"]
+transform = Transform3D(1.17253, 0, 0, 0, 1, 0, 0, 0, 1, 0.190659, 4.3253, 0.407349)
+size = Vector3(1, 2.26843, 1.2832)
+
+[node name="Sprite3D" type="Sprite3D" parent="Map2/logo2"]
+transform = Transform3D(0.184692, 0, 0, 0, 0.360636, 0, 0, 0, 1.28292, 0.173469, 4.29192, 1.07068)
+texture = ExtResource("19_57c7m")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Map2/logo2"]
+transform = Transform3D(0.175489, 0, 0, 0, 0.355777, 0, 0, 0, 2.37463, 0.206562, 4.35174, -0.256012)
+texture = ExtResource("19_57c7m")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Map2/logo2"]
+transform = Transform3D(-0.0025836, 0, -0.411275, 0, 0.360651, 0, 0.201119, 0, -0.00528341, -0.403725, 4.33366, 0.399536)
+texture = ExtResource("19_57c7m")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Map2/logo2"]
+transform = Transform3D(-0.000217524, 0, -0.411168, 0, 0.347371, 0, 0.19786, 0, -0.000452143, 0.787832, 4.31621, 0.424438)
+texture = ExtResource("19_57c7m")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2"]
+transform = Transform3D(1.41213, 0.00437048, 0.0165089, -0.00128445, 4.78023, -0.000520974, -0.0175402, 0.00181969, 1.32914, -13.6451, 0.765053, 73.2443)
+size = Vector3(415.886, 1, 424.848)
+
+[node name="Scoreboard2" parent="Map2" instance=ExtResource("10_fk7mn")]
+transform = Transform3D(0.0673188, 0, -0.997731, 0, 1, 0, 0.997731, 0, 0.0673188, 273.429, 1.54622, 68.5214)
+
+[node name="tv8" type="MeshInstance3D" parent="Map2"]
+transform = Transform3D(2.44195, -8.93378, -0.435972, -0.421071, 0.232673, -16.4964, 47.71, 0.459306, -0.123276, 261.544, 29.0169, -61.7298)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tv8"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tv8/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tv8/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tv8"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tv8"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tv8"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv13" type="MeshInstance3D" parent="Map2"]
+transform = Transform3D(2.44195, -8.93378, -0.435972, -0.421071, 0.232673, -16.4964, 47.71, 0.459306, -0.123276, 278.622, 29.2741, 187.415)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tv13"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tv13/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tv13/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tv13"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tv13"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tv13"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tvs2" type="Node3D" parent="Map2"]
+transform = Transform3D(-0.402235, 0, 0.915536, 0, 1, 0, -0.915536, 0, -0.402235, 36.3554, 3.17615, 33.6818)
+
+[node name="tv4" type="MeshInstance3D" parent="Map2/tvs2"]
+transform = Transform3D(7.57391, -1.38687, -0.100715, -0.0956025, 0.0504038, -4.06525, 7.76425, 1.35349, 0.0481899, 14.9262, 9.0764, -23.3904)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tvs2/tv4"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tvs2/tv4/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tvs2/tv4/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tvs2/tv4"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tvs2/tv4"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tvs2/tv4"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv10" type="MeshInstance3D" parent="Map2/tvs2"]
+transform = Transform3D(3.73837, -1.81898, -0.111615, -0.0956025, 0.0504038, -4.06525, 10.182, 0.668326, 0.00280986, 27.52, 9.0764, -3.38992)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tvs2/tv10"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tvs2/tv10/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tvs2/tv10/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tvs2/tv10"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tvs2/tv10"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tvs2/tv10"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv5" type="MeshInstance3D" parent="Map2/tvs2"]
+transform = Transform3D(10.4886, -0.493282, -0.0615896, -0.0956025, 0.0504038, -4.06525, 2.76338, 1.87404, 0.0931262, -5.07742, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tvs2/tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tvs2/tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tvs2/tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tvs2/tv5"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tvs2/tv5"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tvs2/tv5"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv6" type="MeshInstance3D" parent="Map2/tvs2"]
+transform = Transform3D(10.5386, 0.458904, -0.00979678, -0.0956025, 0.0504038, -4.06525, -2.56612, 1.88275, 0.11122, -28.493, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tvs2/tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tvs2/tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tvs2/tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tvs2/tv6"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tvs2/tv6"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tvs2/tv6"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv9" type="MeshInstance3D" parent="Map2/tvs2"]
+transform = Transform3D(9.16585, 1.03654, 0.0262614, -0.0956025, 0.0504038, -4.06525, -5.79957, 1.63736, 0.108518, -50.4647, 9.38848, -25.5027)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map2/tvs2/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map2/tvs2/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map2/tvs2/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map2/tvs2/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map2/tvs2/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map2/tvs2/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="Map3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 995.829)
+script = ExtResource("21_rq77h")
 
-[node name="Map4" parent="." instance=ExtResource("7_1l7tq")]
+[node name="tv8" type="MeshInstance3D" parent="Map3"]
+transform = Transform3D(-47.7628, -0.182054, 0.136736, -0.421071, 0.232673, -16.4964, 0.961303, -8.94372, -0.431939, 131.364, 24.1304, 93.9049)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tv8"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tv8/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tv8/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tv8"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tv8"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tv8"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3"]
+material_overlay = SubResource("StandardMaterial3D_7v3km")
+use_collision = true
+size = Vector3(1000, 5, 1000)
+
+[node name="Area3D2" type="Area3D" parent="Map3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.353382, 0.280723, -80.1083)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/Area3D2"]
+transform = Transform3D(1.59968, -0.00661835, 1.54753, 0, 1.58773, 0.00679027, -1.07514, -0.00984729, 2.30253, -16.725, 10.2663, 5.99324)
+size = Vector3(3.5798, 2.2973, 2.39075)
+
+[node name="logo" type="CSGBox3D" parent="Map3/Area3D2"]
+transform = Transform3D(1.60917, 0, 1.55668, 0, 1.59712, 0, -1.08152, 0, 2.31615, -16.4587, 5.50847, 5.5399)
+size = Vector3(1.16197, 3.75703, 1.16735)
+
+[node name="Sprite3D" type="Sprite3D" parent="Map3/Area3D2"]
+transform = Transform3D(0.284862, -0.000202741, 1.47292, 0, 0.192223, 0.00163525, -0.191455, -0.000301653, 2.19152, -14.871, 10.2206, 8.76814)
+texture = ExtResource("5_xk5i3")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Map3/Area3D2"]
+transform = Transform3D(0.282711, -0.000724653, 2.61824, 0, 0.183611, 0.0108772, -0.19001, -0.00107819, 3.89562, -18.5946, 10.2655, 3.22783)
+flip_h = true
+texture = ExtResource("5_xk5i3")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Map3/Area3D2"]
+transform = Transform3D(0.180155, 0.000609145, -1.83158, -5.79977e-05, 0.189471, 0.00524937, 0.268025, -0.000284305, 1.23123, -13.8243, 10.2747, 4.10018)
+flip_h = true
+texture = ExtResource("5_xk5i3")
+
+[node name="Node3D" type="Node3D" parent="Map3/Area3D2"]
+transform = Transform3D(1.60917, 0, 1.55668, 0, 1.59712, 0, -1.08152, 0, 2.31615, -16.5045, 4.60782, 5.47163)
+
+[node name="Sprite3D4" type="Sprite3D" parent="Map3/Area3D2"]
+transform = Transform3D(0.187382, 0.000607335, -5.91867, -5.94909e-05, 0.190951, 0.0171917, 0.273146, -0.000297965, 4.14974, -19.6244, 10.2747, 7.98316)
+texture = ExtResource("5_xk5i3")
+
+[node name="Scoreboard2" parent="Map3" instance=ExtResource("10_fk7mn")]
+transform = Transform3D(-0.999967, 0, -0.0080808, 0, 1, 0, 0.0080808, 0, -0.999967, -8.63339, 0.556088, 66.4355)
+
+[node name="tv9" type="MeshInstance3D" parent="Map3"]
+transform = Transform3D(-47.7628, -0.182054, 0.136736, -0.421071, 0.232673, -16.4964, 0.961303, -8.94372, -0.431939, -149.978, 24.1304, 88.7135)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tvs3" type="Node3D" parent="Map3"]
+transform = Transform3D(0.949912, 0, 0.312517, 0, 1, 0, -0.312517, 0, 0.949912, -14.9102, 3.34568, -91.8751)
+
+[node name="tv4" type="MeshInstance3D" parent="Map3/tvs3"]
+transform = Transform3D(7.57391, -1.38687, -0.100715, -0.0956025, 0.0504038, -4.06525, 7.76425, 1.35349, 0.0481899, 14.9262, 9.0764, -23.3904)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tvs3/tv4"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tvs3/tv4/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tvs3/tv4/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tvs3/tv4"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tvs3/tv4"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tvs3/tv4"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv10" type="MeshInstance3D" parent="Map3/tvs3"]
+transform = Transform3D(3.73837, -1.81898, -0.111615, -0.0956025, 0.0504038, -4.06525, 10.182, 0.668326, 0.00280986, 27.52, 9.0764, -3.38992)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tvs3/tv10"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tvs3/tv10/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tvs3/tv10/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tvs3/tv10"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tvs3/tv10"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tvs3/tv10"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv5" type="MeshInstance3D" parent="Map3/tvs3"]
+transform = Transform3D(10.4886, -0.493282, -0.0615896, -0.0956025, 0.0504038, -4.06525, 2.76338, 1.87404, 0.0931262, -5.07742, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tvs3/tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tvs3/tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tvs3/tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tvs3/tv5"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tvs3/tv5"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tvs3/tv5"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv6" type="MeshInstance3D" parent="Map3/tvs3"]
+transform = Transform3D(10.5386, 0.458904, -0.00979678, -0.0956025, 0.0504038, -4.06525, -2.56612, 1.88275, 0.11122, -28.493, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tvs3/tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tvs3/tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tvs3/tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tvs3/tv6"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tvs3/tv6"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tvs3/tv6"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv9" type="MeshInstance3D" parent="Map3/tvs3"]
+transform = Transform3D(9.16585, 1.03654, 0.0262614, -0.0956025, 0.0504038, -4.06525, -5.79957, 1.63736, 0.108518, -50.4647, 9.38848, -25.5027)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map3/tvs3/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map3/tvs3/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map3/tvs3/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map3/tvs3/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map3/tvs3/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map3/tvs3/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="Map4" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -995.236, 0, 0)
+script = ExtResource("22_34l85")
 
-[node name="Map5" parent="." instance=ExtResource("8_7qjn6")]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4"]
+transform = Transform3D(-2.47814, 9.16013, 0.446937, -0.431716, 0.238617, -16.9138, -48.9189, -0.466195, 0.126615, -288.251, 26.4167, 112.503)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="tv14" type="MeshInstance3D" parent="Map4"]
+transform = Transform3D(-7.91188, 8.8217, 0.447255, -0.421071, 0.232673, -16.4964, -47.1128, -1.48355, 0.0723264, -318.851, 26.5853, -149.149)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tv14"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tv14/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tv14/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tv14"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4"]
+material_overlay = SubResource("StandardMaterial3D_k7ts8")
+use_collision = true
+size = Vector3(1000, 5, 1000)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4"]
+transform = Transform3D(-6.68116, 14.1083, 0.482009, -0.355554, 0.372074, -17.7782, -39.7842, -2.37162, 0.0779504, -312.612, -1.524, -114.649)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="tv15" type="MeshInstance3D" parent="Map4"]
+transform = Transform3D(-2.41696, 8.93402, 0.435907, -0.421071, 0.232673, -16.4964, -47.7113, -0.454628, 0.123504, -287.91, 26.7649, 113.626)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tv15"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tv15/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tv15/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tv15"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tv15"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tvs3" type="Node3D" parent="Map4"]
+transform = Transform3D(0.41428, 0, -0.910149, 0, 1, 0, 0.910149, 0, 0.41428, -146.829, 1.29824, -17.2383)
+
+[node name="tv4" type="MeshInstance3D" parent="Map4/tvs3"]
+transform = Transform3D(7.57391, -1.38687, -0.100715, -0.0956025, 0.0504038, -4.06525, 7.76425, 1.35349, 0.0481899, 14.9262, 9.0764, -23.3904)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs3/tv4"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs3/tv4/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs3/tv4/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs3/tv4"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs3/tv4"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs3/tv4"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv10" type="MeshInstance3D" parent="Map4/tvs3"]
+transform = Transform3D(3.73837, -1.81898, -0.111615, -0.0956025, 0.0504038, -4.06525, 10.182, 0.668326, 0.00280986, 27.52, 9.0764, -3.38992)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs3/tv10"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs3/tv10/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs3/tv10/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs3/tv10"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs3/tv10"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs3/tv10"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv5" type="MeshInstance3D" parent="Map4/tvs3"]
+transform = Transform3D(10.4886, -0.493282, -0.0615896, -0.0956025, 0.0504038, -4.06525, 2.76338, 1.87404, 0.0931262, -5.07742, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs3/tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs3/tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs3/tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs3/tv5"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs3/tv5"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs3/tv5"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv6" type="MeshInstance3D" parent="Map4/tvs3"]
+transform = Transform3D(10.5386, 0.458904, -0.00979678, -0.0956025, 0.0504038, -4.06525, -2.56612, 1.88275, 0.11122, -28.493, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs3/tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs3/tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs3/tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs3/tv6"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs3/tv6"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs3/tv6"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv9" type="MeshInstance3D" parent="Map4/tvs3"]
+transform = Transform3D(9.16585, 1.03654, 0.0262614, -0.0956025, 0.0504038, -4.06525, -5.79957, 1.63736, 0.108518, -50.4647, 9.38848, -25.5027)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs3/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs3/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs3/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs3/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs3/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs3/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tvs2" type="Node3D" parent="Map4"]
+transform = Transform3D(-0.30034, 0, 0.953832, 0, 1, 0, -0.953832, 0, -0.30034, 1867.41, 31.978, -17.2813)
+
+[node name="tv4" type="MeshInstance3D" parent="Map4/tvs2"]
+transform = Transform3D(7.57391, -1.38687, -0.100715, -0.0956025, 0.0504038, -4.06525, 7.76425, 1.35349, 0.0481899, 14.9262, 9.0764, -23.3904)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs2/tv4"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs2/tv4/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs2/tv4/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs2/tv4"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs2/tv4"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs2/tv4"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv10" type="MeshInstance3D" parent="Map4/tvs2"]
+transform = Transform3D(3.73837, -1.81898, -0.111615, -0.0956025, 0.0504038, -4.06525, 10.182, 0.668326, 0.00280986, 27.52, 9.0764, -3.38992)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs2/tv10"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs2/tv10/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs2/tv10/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs2/tv10"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs2/tv10"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs2/tv10"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv5" type="MeshInstance3D" parent="Map4/tvs2"]
+transform = Transform3D(10.4886, -0.493282, -0.0615896, -0.0956025, 0.0504038, -4.06525, 2.76338, 1.87404, 0.0931262, -5.07742, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs2/tv5"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs2/tv5/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs2/tv5/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs2/tv5"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs2/tv5"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs2/tv5"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv6" type="MeshInstance3D" parent="Map4/tvs2"]
+transform = Transform3D(10.5386, 0.458904, -0.00979678, -0.0956025, 0.0504038, -4.06525, -2.56612, 1.88275, 0.11122, -28.493, 9.0764, -35.1735)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs2/tv6"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs2/tv6/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs2/tv6/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs2/tv6"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs2/tv6"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs2/tv6"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv9" type="MeshInstance3D" parent="Map4/tvs2"]
+transform = Transform3D(9.16585, 1.03654, 0.0262614, -0.0956025, 0.0504038, -4.06525, -5.79957, 1.63736, 0.108518, -50.4647, 9.38848, -25.5027)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map4/tvs2/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map4/tvs2/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map4/tvs2/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map4/tvs2/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map4/tvs2/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map4/tvs2/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map4"]
+transform = Transform3D(-6.68116, 14.1083, 0.482009, -0.355554, 0.372074, -17.7782, -39.7842, -2.3716, 0.0779504, -324.976, -1.43554, -188.282)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="Map5" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1001.51, 0, 0)
+script = ExtResource("23_tyiqe")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map5"]
+material_overlay = SubResource("StandardMaterial3D_0nr2p")
+use_collision = true
+size = Vector3(1000, 5, 1000)
+
+[node name="Scoreboard3" parent="Map5" instance=ExtResource("10_fk7mn")]
+transform = Transform3D(0.0696346, 0, -0.997572, 0, 1, 0, 0.997572, 0, 0.0696346, 63.7627, 2.7121, 22.4045)
+
+[node name="tv8" type="MeshInstance3D" parent="Map5"]
+transform = Transform3D(-0.680335, -8.94469, -0.426986, -0.421071, 0.232673, -16.4964, 47.7676, -0.125349, -0.151496, 65.8431, 28.7972, 142.164)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map5/tv8"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map5/tv8/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map5/tv8/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map5/tv8"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map5/tv8"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map5/tv8"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
+
+[node name="tv9" type="MeshInstance3D" parent="Map5"]
+transform = Transform3D(-0.680335, -8.94469, -0.426986, -0.421071, 0.232673, -16.4964, 47.7676, -0.125349, -0.151496, 59.5219, 26.238, -110.793)
+mesh = SubResource("PlaneMesh_ftb4i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tjxw4")
+
+[node name="SubViewport" type="SubViewport" parent="Map5/tv9"]
+size = Vector2i(640, 360)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Map5/tv9/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map5/tv9/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_kgjak")
+autoplay = true
+loop = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map5/tv9"]
+transform = Transform3D(1.02531, 1.2517e-06, 2.84519e-07, 5.96046e-08, 1.02531, 2.16998e-07, -7.68341e-07, -3.35276e-06, 1.0253, 0.0239062, -0.0326118, 0.0200357)
+size = Vector3(2.11246, 0.0505981, 2.15834)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map5/tv9"]
+transform = Transform3D(0.844447, -1.9908e-05, -9.59262e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.0971e-06, 2.24262e-06, 1.0777, -0.728606, -0.0334983, 1.72209)
+size = Vector3(0.230225, 0.0281563, 1.21368)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map5/tv9"]
+transform = Transform3D(0.844447, -2.04444e-05, -9.63919e-08, 4.76837e-07, 1.59925, 1.61584e-07, -1.13249e-06, 2.23517e-06, 1.0777, 0.83417, -0.0311842, 1.67687)
+size = Vector3(0.230225, 0.0287266, 1.26045)
 
 [node name="Scoreboard" parent="." instance=ExtResource("10_fk7mn")]
 transform = Transform3D(-0.999967, 0, -0.0080808, 0, 1, 0, 0.0080808, 0, -0.999967, 0, 0, 235.501)
+
+[node name="Scoreboard2" parent="." instance=ExtResource("10_fk7mn")]
+transform = Transform3D(-0.0997713, 0, 0.99501, 0, 1, 0, -0.99501, 0, -0.0997713, -1297.4, 0, -18.4019)
