@@ -1,0 +1,116 @@
+extends Spatial
+
+func _ready():
+	# Set the window size to a maximum of 400x200
+	OS.window_size = Vector2(min(OS.window_size.x, 600), min(OS.window_size.y,555))
+	OS.set_window_title("Alibaba Advert")
+
+	# Set the background color (use a large PlaneMesh with a color)
+	create_background(Color(1, 0.5, 0))  # Orange background
+
+	# Add the text (title and description) in 3D space
+	create_text()
+
+	# Add the image below the button
+	create_image()
+
+func create_background(color: Color):
+	# Create a large PlaneMesh for the background
+	var background_mesh = PlaneMesh.new()
+	var background_material = SpatialMaterial.new()
+	background_material.albedo_color = color  # Set the background color
+	var background_instance = MeshInstance.new()
+	background_instance.mesh = background_mesh
+	background_instance.material_override = background_material
+	background_instance.scale = Vector3(10, 10, 1)  # Make the plane large enough to cover the view
+	# Set the position using transform
+	background_instance.transform.origin = Vector3(0, 0, -5)
+	add_child(background_instance)
+
+func create_text():
+	# Create the title: "Grow your business through Alibaba"
+	var title = Label.new()
+	title.text = "Grow your business through Alibaba".to_upper()
+	title.add_color_override("font_color", Color(1, 0.5, 0))  # Orange font color
+	title.rect_min_size = Vector2(300, 50)  # Adjust size for the label
+	title.align = Label.ALIGN_CENTER  # Center the text horizontally
+	title.rect_position = Vector2(50, 50)  # Position the title at the top
+	
+	# Load custom font for the title
+	var title_font = DynamicFont.new()
+	title_font.font_data = load("res://goodTime.otf")  # Path to your custom font
+	title_font.size = 18  # Set font size
+	title.add_font_override("font", title_font)  # Apply the custom font to the title
+
+	add_child(title)
+
+	# Create the description: Short text about the advert
+	var description = Label.new()
+	description.text = "Alibaba provides the platform for businesses to expand"
+	description.add_color_override("font_color", Color(0, 0, 0))  # Black text
+	description.rect_min_size = Vector2(300, 20)  # Set size for the label
+	description.align = Label.ALIGN_CENTER  # Center the text horizontally
+	description.rect_position = Vector2(50, 75)  # Position the description below the title
+	
+	# Load custom font for the description
+	var description_font = DynamicFont.new()
+	description_font.font_data = load("res://goodTime.otf")  # Path to your custom font
+	description_font.size = 13  # Set font size for description
+	description.add_font_override("font", description_font)  # Apply the custom font to the description
+
+	add_child(description)
+
+	var description1 = Label.new()
+	description1.text = " globally and increase their reach."
+	description1.add_color_override("font_color", Color(0, 0, 0))  # Black text
+	description1.rect_min_size = Vector2(300, 20)  # Set size for the label
+	description1.align = Label.ALIGN_CENTER  # Center the text horizontally
+	description1.rect_position = Vector2(6, 95)  # Position the description below the first description
+	add_child(description1)
+
+	# Create the "Get Started Now" button
+	var button = Button.new()
+	button.text = "Get Started Now"
+	button.rect_min_size = Vector2(200, 50)  # Set size for the button
+	button.rect_position = Vector2(50, 120)  # Position the button below the descriptions
+	
+	# Create a StyleBox to change the button background color to orange
+	var style_box = StyleBoxFlat.new()
+	style_box.bg_color = Color(1, 0.5, 0)  # Orange color for the button
+	button.add_stylebox_override("normal", style_box)  # Apply style to normal state
+	button.add_stylebox_override("pressed", style_box)  # Optionally change pressed state color
+	button.add_stylebox_override("hover", style_box)  # Optionally change hover state color
+
+	# Load custom font for the button text
+	var button_font = DynamicFont.new()
+	button_font.font_data = load("res://goodTime.otf")  # Path to your custom font
+	button_font.size = 14  # Set font size for button text
+	button.add_font_override("font", button_font)  # Apply the custom font to the button text
+
+	# Set the button text color to black
+	button.add_color_override("font_color", Color(0, 0, 0))  # Black text inside the button
+
+	button.connect("pressed", self, "_on_button_pressed")
+	add_child(button)
+
+func create_image():
+	# Add the image as a Sprite
+	var image_sprite = Sprite.new()
+	image_sprite.texture = load("res://PR_ALIBABA_3569X22162-1536x954.jpg")  # Adjust the path as needed
+
+	# Scale the image to fit the screen width while maintaining its aspect ratio
+	var texture = image_sprite.texture
+	var scale_factor = OS.window_size.x / texture.get_width()
+	image_sprite.scale = Vector2(scale_factor, scale_factor)
+
+	# Center the image on the screen
+	image_sprite.position = Vector2( 221,  280)
+
+	image_sprite.offset = Vector2( 200, 250)
+
+	add_child(image_sprite)
+
+
+func _on_button_pressed():
+	# Action when the button is pressed
+	print("Get Started Now button pressed!")
