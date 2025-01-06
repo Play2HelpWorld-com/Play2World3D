@@ -1,0 +1,52 @@
+extends Node2D
+
+# AdMob IDs
+const ADMOB_APP_ID = "ca-app-pub-1292771037409101~4087763325"
+const ADMOB_BANNER_ID = "ca-app-pub-1292771037409101/5149563553"
+const ADMOB_INTERSTITIAL_ID = "ca-app-pub-1292771037409101/9311874694"
+
+var admob
+var banner_node
+
+func _ready():
+    
+    banner_node = Node2D.new()
+    add_child(banner_node)
+    banner_node.rect_size = Vector2(320, 50)  
+
+    admob = AdMob.new()
+
+    # Initialize AdMob
+    if not admob.init(ca-app-pub-1292771037409101~4087763325):
+        print("Failed to initialize AdMob!")
+        return
+
+    # Load banner ad
+    if not admob.load_banner(ca-app-pub-1292771037409101/5149563553):
+        print("Failed to load banner ad!")
+    else:
+        admob.connect("ad_loaded", self, "_on_banner_loaded")
+
+    # Load interstitial ad
+    if not admob.load_interstitial(ca-app-pub-1292771037409101/9311874694):
+        print("Failed to load interstitial ad!")
+    else:
+        admob.connect("ad_closed", self, "_on_interstitial_closed")
+
+func _on_banner_loaded():
+    # Position the banner at the bottom center of the screen
+    var viewport_size = get_viewport_rect().size
+    banner_node.global_position = Vector2(viewport_size.x / 2 - banner_node.rect_size.x / 2, viewport_size.y - banner_node.rect_size.y)
+
+func _on_interstitial_loaded():
+    print("Interstitial ad loaded successfully!")
+
+func _on_interstitial_closed():
+    
+    admob.load_interstitial(ca-app-pub-1292771037409101/9311874694)
+
+func show_interstitial_ad():
+    if admob.is_interstitial_loaded():
+        admob.show_interstitial()
+    else:
+        print("Interstitial ad not loaded yet.")
